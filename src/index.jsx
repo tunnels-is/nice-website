@@ -2,17 +2,26 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import { ChakraProvider } from '@chakra-ui/react'
-import { extendTheme } from '@chakra-ui/react'
-import { VStack, Container, Grid, GridItem } from '@chakra-ui/react'
-import { ColorModeScript } from '@chakra-ui/react'
+import {
+	ChakraProvider,
+	extendTheme,
+	Grid,
+	ColorModeScript
+} from '@chakra-ui/react'
 
-import Home from "./pages/home";
 import Footer from "./components/footer";
 import WithSubnavigation from "./components/nav";
 import STORE from "./store";
 
 import "./assets/style/index.scss"
+
+import Home from "./pages/home";
+import PublicVPN from "./pages/publicvpn-features";
+import Pricing from "./pages/pricing";
+import OfficeVPN from "./pages/officevpn-features";
+import PrivateVPN from "./pages/privatevpn-features";
+import DNS from "./pages/dns";
+import Threat from "./pages/threat";
 
 const config = {
 	initialColorMode: 'dark', // 'dark' | 'light'
@@ -20,11 +29,11 @@ const config = {
 }
 
 const theme = extendTheme({ config })
-
 const root = createRoot(document.getElementById('root'));
 
 const App = () => {
 	return (
+
 		<React.StrictMode>
 			<ChakraProvider theme={theme} resetCSS={true}>
 				<HashRouter >
@@ -33,6 +42,16 @@ const App = () => {
 
 						<Routes>
 							<Route path="/" element={<Home />} />
+							<Route path="/tldr" element={<Home />} />
+
+							<Route path="/public" element={<PublicVPN />} />
+							<Route path="/private" element={<PrivateVPN />} />
+							<Route path="/office" element={<OfficeVPN />} />
+							<Route path="/pricing" element={<Pricing />} />
+
+							<Route path="/dns" element={<DNS />} />
+							<Route path="/threat" element={<Threat />} />
+
 							<Route path="*" element={<Home />} />
 						</Routes>
 
@@ -42,6 +61,7 @@ const App = () => {
 				</HashRouter>
 			</ChakraProvider>
 		</React.StrictMode >
+
 	)
 }
 

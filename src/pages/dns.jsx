@@ -10,7 +10,7 @@ import {
 import ThreeTierPricing from "../components/pricing";
 import STORE from "../store"
 
-const Home = () => {
+const DNS = () => {
 	let fl = STORE.Content.Features
 
 	return (<>
@@ -63,5 +63,5 @@ const Home = () => {
 	</>);
 }
 
-export default Home;
+export default DNS;
 

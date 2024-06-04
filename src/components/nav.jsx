@@ -5,8 +5,6 @@ import {
 	Flex,
 	Text,
 	IconButton,
-	Button,
-	Image,
 	Stack,
 	Collapse,
 	Icon,
@@ -24,12 +22,14 @@ import {
 	ChevronDownIcon,
 	ChevronRightIcon,
 } from '@chakra-ui/icons'
+import STORE from '../store'
 
 export default function WithSubnavigation() {
 	const { isOpen, onToggle } = useDisclosure()
 
 	return (
 		<GridItem colStart={2} colSpan={10} >
+
 			<Box>
 				<Flex
 					bg={useColorModeValue('white', 'gray.800')}
@@ -181,43 +181,47 @@ const MobileNavItem = ({ label, children, href }) => {
 	)
 }
 
-
 const NAV_ITEMS = [
-	{
-		label: 'Get Started',
-		href: '#',
-	},
 	{
 		label: 'Features',
 		children: [
 			{
-				label: 'Explore Design Work',
-				subLabel: 'Trending Design to inspire you',
-				href: '#',
+				label: 'Public VPN',
+				subLabel: 'Get access to a global network',
+				href: '#/public',
 			},
 			{
-				label: 'New & Noteworthy',
-				subLabel: 'Up-and-coming Designers',
-				href: '#',
+				label: 'Private VPN',
+				subLabel: 'Set up your own VPN',
+				href: '#/private',
+			},
+			{
+				label: 'Office VPN',
+				subLabel: 'Connect all your offices!',
+				href: '#/office',
 			},
 		],
 	},
 	{
-		label: 'Docs',
-		href: '#',
+		label: 'Docs / Faq',
+		href: STORE.Config.docsLink,
 	},
 	{
-		label: 'Services',
+		label: 'TLDR',
+		href: '#/tldr',
+	},
+	{
+		label: 'Other Services',
 		children: [
 			{
-				label: 'Honey Data',
-				subLabel: 'Find your dream design job',
-				href: '#',
+				label: 'Threat Intelligence',
+				subLabel: 'Protect your data from online threats',
+				href: '#/honey',
 			},
 			{
-				label: 'DNS Gateway',
-				subLabel: 'DNS Security filtering',
-				href: '#',
+				label: 'Security DNS',
+				subLabel: 'DNS filtering and protection',
+				href: '#/dns',
 			},
 		],
 	}

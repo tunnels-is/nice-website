@@ -1,6 +1,7 @@
 const DATA = "data_";
 
 var STORE = {
+	Name: "Niceland",
 	PayPalInputs: {},
 	Config: {
 		CLIENT: "https://nicelandvpn.is", // local client
