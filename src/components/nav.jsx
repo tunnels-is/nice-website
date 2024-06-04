@@ -203,6 +203,10 @@ const NAV_ITEMS = [
 		],
 	},
 	{
+		label: 'Pricing',
+		href: '#/pricing',
+	},
+	{
 		label: 'Docs / Faq',
 		href: STORE.Config.docsLink,
 	},

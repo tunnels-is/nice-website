@@ -13,7 +13,13 @@ const Pricing = () => {
 	return (<>
 
 		<GridItem colStart={2} colSpan={10} >
-			<ImageLeft />
+			<ImageLeft
+				image={"https://kutty.netlify.app/hero.jpg"}
+				title={"This is a title"}
+				subtitle={"This is a subtitle"}
+				text={"mega big text about something super important that we don't want to forget about,...."}
+				button={"Click me!"}
+			/>
 		</GridItem>
 
 		<GridItem colStart={2} colSpan={10} >
@@ -21,7 +27,13 @@ const Pricing = () => {
 		</GridItem>
 
 		<GridItem colStart={2} colSpan={10} >
-			<ImageRight />
+			<ImageRight
+				image={"https://kutty.netlify.app/hero.jpg"}
+				title={"This is a title"}
+				subtitle={"This is a subtitle"}
+				text={"mega big text about something super important that we don't want to forget about,...."}
+				button={"Click me!"}
+			/>
 		</GridItem>
 
 	</>);

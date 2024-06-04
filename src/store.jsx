@@ -4,13 +4,8 @@ var STORE = {
 	Name: "Niceland",
 	PayPalInputs: {},
 	Config: {
-		CLIENT: "https://nicelandvpn.is", // local client
-		COUNTER_URL: "https://pay.nicelandvpn.is/count/",
-		REGISTER_URL: "https://pay.nicelandvpn.is/user/create",
-		AFFILIATE_URL: "https://pay.nicelandvpn.is/affiliate",
-
+		docsLink: "https://docs.nicelandvpn.is",
 		APITimeout: 20000,
-		ID: "tunnels-is-portal-id",
 		HEADERS: {
 			// "X-AUTH-TOKEN": "some-authentication-token",
 			"Content-Type": "application/json",
@@ -20,24 +15,35 @@ var STORE = {
 			{
 				Title: "Anonymous License Key",
 				Price: 9,
-				URL: "https://nicelandvpn.lemonsqueezy.com/buy/e8cbc47c-c19b-4ef7-9f8a-c8e2b94597dd"
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/e8cbc47c-c19b-4ef7-9f8a-c8e2b94597dd",
+				Button: "Register Now",
+				Included: ["something", "something", "something"],
 			}
 		],
 		subs: [
 			{
 				Title: "1 Month",
+				Per: "/ month",
 				Price: 9,
-				URL: "https://nicelandvpn.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3"
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3",
+				Button: "Register Now",
+				Included: ["Support", "Money Back Guarantee", "Access all standard features"],
 			},
 			{
 				Title: "6 Month",
+				Per: "/ 6 months",
 				Price: 49,
-				URL: "https://nicelandvpn.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361"
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361",
+				Button: "Register Now",
+				Included: ["Support", "Money Back Guarantee", "Access all standard features", "Additional ???"],
 			},
 			{
 				Title: "12 Month",
+				Per: "/ 12 months",
 				Price: 69,
-				URL: "https://nicelandvpn.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a"
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a",
+				Button: "Register Now",
+				Included: ["Support", "Money Back Guarantee", "Access all standard features", "Additional ???", "More Additional ???"],
 			}
 
 		],
