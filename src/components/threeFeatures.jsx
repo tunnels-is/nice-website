@@ -3,11 +3,11 @@ import {
 	Box,
 	Text,
 	Image,
+	Icon,
 	Heading,
 	SimpleGrid,
 	useColorModeValue,
 } from '@chakra-ui/react'
-
 
 const ThreeFeatures = (props) => {
 	return (
@@ -20,7 +20,7 @@ const ThreeFeatures = (props) => {
 					return (
 						<Box>
 							{f.icon &&
-								<Image boxSize={20} objectFit='cover' src={f.icon} alt='Feature Icon' />
+								<Icon as={f.icon} boxSize={20} objectFit='cover' />
 							}
 							<Heading as="h3" mb={3} fontSize="lg" lineHeight="shorter" fontWeight="bold" >
 								{f.title}
