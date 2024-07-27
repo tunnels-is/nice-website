@@ -4,6 +4,18 @@ import { MdSettings } from 'react-icons/md'
 var STORE = {
 	Name: "Niceland",
 	PayPalInputs: {},
+	HomepageAnimationTags: [
+		"homepage-0",
+		"homepage-1",
+		"homepage-2",
+		"homepage-3",
+		"homepage-4",
+		"homepage-5",
+		"homepage-6",
+		"homepage-7",
+		"homepage-8",
+		"homepage-9",
+	],
 	Config: {
 		docsLink: "https://docs.nicelandvpn.is",
 		APITimeout: 20000,
@@ -73,7 +85,6 @@ var STORE = {
 	},
 	Content: {
 		Features: {
-			// SECURITY FEATURES
 			"NoLogging": {
 				icon: MdSettings,
 				title: "No-Logging Policy",
@@ -140,7 +151,6 @@ var STORE = {
 				short: "Standard email/password authentication is sometimes not enough to keep your accounts safe, which is why Niceland enables users to activate Two-Factor Authentication for their accounts.",
 				long: "",
 			},
-			// QUALITY FEATURES
 			"GuaranteedBandwidth": {
 				icon: MdSettings,
 				title: "Minimum Bandwidth Guarantee",
@@ -201,9 +211,6 @@ var STORE = {
 				short: "NicelandVPN runs on a custom routing protocol that is designed to penetrate firewalls. While using NicelandVPN all of your network traffic looks like you are talking to a website (HTTPS).",
 				long: "",
 			},
-
-			// BUSINESS VPN FEATURES
-
 			"BUSINESS-SimpleSetup": {
 				icon: MdSettings,
 				title: "Simple Setup",
@@ -378,274 +385,6 @@ var STORE = {
 				long: "",
 			},
 		},
-		Guides: [
-			{
-				title: "Getting Started With Niceland VPN",
-				tag: "getting-started",
-				content: [
-					"title:::Step 1: Downloading Niceland",
-					"html:::Download Niceland VPN by clicking <a target='_blank' href='/#/download'>this link</a>",
-
-					"title:::Step 2: Opening Niceland",
-					"text:::On Windows and Linux, you can simply run Niceland! No install needed. ",
-					"text:::On MacOS, you will need to drag the application to the applications folder.",
-
-					"title:::Step 3: Creating Your Account",
-					"text:::Accounts are created inside the Niceland VPN app, not on the website. This is for security reasons.",
-
-					"title:::Step 4: Choosing A Subscription",
-					"html:::Detailed subscription information can be seen by clicking <a target='_blank' href='/#/signup'>this link</a>",
-
-					"title:::Step 5: Activating Your License Key",
-					"text:::Once payment is complete, you will receive a License key.",
-					"text:::You can use this key inside the 'Settings' page in the app to activate your account.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/lkh.png",
-
-					"title:::Step 6: Connecting To Niceland",
-					"text:::Click a country of your choosing and select yes!",
-				]
-			},
-			{
-				title: "DNS: How to configure blocking",
-				tag: "dns-blocking",
-				content: [
-					"title:::Step 1 Getting into the DNS settings",
-					"text:::Select DNS from the sidebar.",
-
-					"title:::Step 2 Turning on/off block-lists",
-					"text:::On the Blocking card you can see all the categories you can block. Click on those you want to block to turn them off, click on them again to unblock them.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/dns_blocking.png",
-
-					"title:::Step 3 Saving your changes",
-					"text:::Click the SAVE button that appeared on the top to save your configuration.",
-				]
-			},
-			{
-				title: "Connections: Configuring the DEFAULT connection",
-				tag: "configuring-default-connection",
-				content: [
-					"html:::You must be in Advanced Mode. To learn how to enable it click <a href='#/guides/enable-advanced-mode'>here</a>.",
-
-					"title:::Step 1 Selecting an entry point",
-					"text:::Select Routers from the sidebar.",
-					"text:::Choose a server, click the Add To Connection button and select DEFAULT.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/selecting_entry_point.png",
-
-					"title:::Step 2 Selecting an exit point",
-					"text:::Select Nodes from the sidebar.",
-					"text:::Choose a server, click the Add To Connection button and select DEFAULT.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/selecting_exit_point.png",
-
-					"title:::Step 3 Connecting",
-					"text:::Select Connections from the sidebar.",
-					"text:::Click the CONNECT button on the DEFAULT connection. A confirmation pop-up will appear asking you if you really want to connect there, click YES to connect.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/connecting.png",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/connecting_confirm_dialog.png",
-					"text:::When the connection is successful a connection ready notification will appear.",
-
-					"title:::Step 4 Disconnecting",
-					"text:::When you wish to disconnect select Connections from the sidebar if you are not already there.",
-					"text:::Then click DISCONNECT on the DEFAULT connection card, a confirmation pop-up will appear click YES to disconnect.",
-				]
-			},
-			{
-				title: "Enabling Two Factor Authentication",
-				tag: "enable-2-fa",
-				content: [
-					"title:::Step 1 Getting into the settings",
-					"text:::Select Settings from the sidebar.",
-
-					"title:::Step 2 Starting the 2-FA procedure ",
-					"text:::On the Account card click the Two-Factor Authentication button.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/2fa-1.png",
-
-					"title:::Step 3 Scanning the QR code and confirming it",
-					"text:::Scan the QR code with an authenticator App, like Google Authenticator or Aegis.",
-					"text:::Below the QR code there is a form. You have to put the code from the authenticator App in the first field and your password in the second field. The third field is optional and can be ignored for now.",
-					"text:::Then click confirm to complete the process.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/2fa-2.png",
-				]
-			},
-			{
-				title: "Enabling Advanced Mode",
-				tag: "enable-advanced-mode",
-				content: [
-					"title:::Step 1 Getting into the settings",
-					"text:::Select Settings from the sidebar.",
-
-					"title:::Step 2 Turning on/off advanced mode",
-					"text:::On the Configurations card, click on the off next to Advanced Mode to turn it on and vice versa.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/advanced_mode.png",
-
-					"title:::Step 3 Save your changes",
-					"text:::Do not forget to click the SAVE button that appeared at the top to save your changes.",
-				]
-			},
-			{
-				title: "Enabling Debug and Info Logging",
-				tag: "enable-debug-logging",
-				content: [
-					"title:::Step 1 Getting into the settings",
-					"text:::Select Settings from the sidebar.",
-
-					"title:::Step 2 Turning on/off debug and info logging",
-					"text:::On the Configurations card, click on the off next to Debug Logging and Info Logging to turn them on and vice versa.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/info_debug_logging.png",
-
-					"title:::Step 3 Saving your changes",
-					"text:::Click on the SAVE button that appeared at the top to save your changes.",
-				]
-			},
-			{
-				title: "Resetting NicelandVPN Settings to Default",
-				tag: "resetting-nicelandvpn-settings",
-				content: [
-					"title:::Step 1 Getting into the settings",
-					"text:::Select Settings from the sidebar.",
-
-					"title:::Step 2 Resetting the App",
-					"text:::On the Configurations card, click on the Reset App button.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/reset_app.png",
-				]
-			},
-			{
-				title: "Managing Logged in Devices",
-				tag: "manage-logged-in-devices",
-				content: [
-					"title:::Step 1 Getting into the settings",
-					"text::: Select settings from the sidebar,",
-
-					"title:::Step 2 Logging out from other devices",
-					"text:::On the Logins card, you can click on logout on each device you wish to log out from.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/logout_devices.png",
-				]
-			},
-			{
-				title: "Registering an Anonymous Account",
-				tag: "register-anonymously",
-				content: [
-					"title:::Step 1 Getting your token",
-					"text:::On the login screen, click on Register Anonymously. On the first field in the form, a token will appear. Save it somewhere or you will not be able to login. This acts like your username.",
-
-					"title:::Step 2 Adding and confirming your password",
-					"text:::Add your password in the second field and once again confirm your password in the third. Optionally you can add an affiliate code in the last field.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/registering_anonymously.png",
-
-					"tile:::Completing the registration",
-					"text:::Click the Register button to complete the process.",
-				]
-			},
-			{
-				title: "DNS: How to change servers",
-				tag: "change-dns",
-				content: [
-					"title:::Step 1 Getting into the DNS settings",
-					"text:::Select DNS from the sidebar.",
-
-					"title:::Step 2 Changing the DNS",
-					"text:::On the Settings card, click on the field next to Primary delete the old IP and enter the DNS IP you want. Do the same for the Secondary.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/changing_dns.png",
-
-					"title:::Step 3 Saving your changes",
-					"text:::Don't forget to click the SAVE button that appeared at the top to save your settings."
-				]
-			},
-			{
-				title: "API: Configuring address and port",
-				tag: "configure-api",
-				content: [
-					"html:::You must be in Advanced Mode. To learn how to enable it, click <a href='#/guides/enable-advanced-mode'>here</a>.",
-
-					"title:::Step 1 Getting into the DNS settings",
-					"text:::Select DNS from the sidebar.",
-
-					"title:::Step 2 Changing the IP and Port",
-					"text:::In the Settings card, you can input the IP you want in the Server IP field and the port right below it in the Server Port field.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/changing_api_ip_port.png",
-
-					"title:::Step 3 Saving your changes",
-					"text:::Click the SAVE button that appeared at the top to save your changes.",
-				]
-			},
-			{
-				title: "Using SSH with NicelandVPN",
-				tag: "ssh-through-nicelandvpn",
-				content: [
-					"text:::If you have trouble with SSH connections, use the ServerAliveInterval option.",
-					"text:::ServerAliveInterval will send pings between client and server to make sure the connection stays active.",
-					"text:::",
-					"html:::<code>$ ssh -o ServerAliveInternal=30 root@1.1.1.1</code>",
-				]
-			},
-			{
-				title: "Downloading and Running the CLI App",
-				tag: "running-nicelandvpn-cli",
-				content: [
-					"title:::Step 1 Downloading the CLI App",
-					"html:::Download the CLI binary for your platform from <a href='https://github.com/tunnels-is/NicelandVPN/releases/latest'>here</a>.",
-					"text:::For example, if you are on windows you want to download NicelandVPN-Windows-CLI.exe.",
-
-					"title:::Step 2 Move the binary to a convenient place",
-					"text:::We recommend moving the binary to its own folder because it generates some files in the directory the binary is in on the first run.",
-					"text:::NicelandVPN makes a directory called files, inside this directory is the configuration in config.json and also the logs.",
-
-					"title:::Step 3 Execute the CLI App",
-					"text:::NicelandVPN requires elevated privileges because it is a portable VPN.",
-					"text:::Wich means that NicelandVPN will not install anything on your system.",
-					`html:::
-						<p>To run the CLI on windows:</p>
-					<ul>
-							<li>1. Start Poweshell, CMD or bash shell as Administrator</li>
-							<li>2. Navigate to the directory containing NicelandVPN </li>
-							<li>3. Run NicelandVPN: <code>$ NicelandVPN-Windows-CLI.exe</code></li></ul>
-						<p>To run the CLI on MacOS and Linux:</p>
-						<ul>
-							<li>1. Navigate to the directory containing NicelandVPN </li>
-							<li>2. Run NicelandVPN: <code>$ sudo ./NicelandVPN-Linux-CLI</code></li>
-					</ul>`,
-					"title:::Step 4 Using the CLI App",
-					"text:::When you execute the NicelandVPN CLI app, you can use the web UI that runs by default on localhost:22222.",
-					"html:::If you want to learn how to change the defaults, see <a href='#/guides/configure-api'>here.</a>",
-				]
-			},
-			{
-				title: "Password Recovery",
-				tag: "password-recovery",
-				content: [
-					"title:::Step 1 Log-in screen",
-					"text:::Select Login from the sidebar if you are not already there.",
-
-					"title:::Step 2 Starting the password recovery",
-					"text:::Click on Reset Password at the bottom.",
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/reset_password.png",
-
-					"title:::Step 3 Entering your email",
-					"text:::Your account's email should be in the first field (1), if not enter it now.",
-
-					"title:::Step 4 Getting the recovery code",
-					"text:::Press the Click To Reset Code button (2). You will receive a recovery code in your email.",
-					"text:::Enter the recovery code in the fourth field on the form (3).",
-
-					"title:::Step 6 Choose a new password",
-					"text:::Then enter a new password in the second and third field (4).",
-
-					"title:::Step 7 Complete the recovery",
-					"text:::Finaly click the Reset Password button to complete the reset (5). After that you can login with your new password.",
-
-					"image:::https://raw.githubusercontent.com/tunnels-is/media/master/nl-website/v2/sections/how-to-use-niceland/reset_password-2.png",
-				]
-			},
-		],
-		Blogs: [
-			{
-				title: "Test Blog Post",
-				tag: "test-blog-post",
-				content: [
-					"title:::Test Blog Post",
-					"text:::Blah blah blah blah...",
-				]
-			},
-		]
 	},
 	GetAndSaveDomain: function() {
 		let host = window.location.host
@@ -673,11 +412,11 @@ var STORE = {
 			console.dir(error)
 		}
 
-		Store.Set("subdomain", subdomain)
+		STORE.Set("subdomain", subdomain)
 		return subdomain
 	},
 	Cache: {
-		Clear: function(key) {
+		Clear: function() {
 			return window.localStorage.clear()
 		},
 		Get: function(key) {
@@ -732,7 +471,7 @@ var STORE = {
 		},
 	},
 	SessionCache: {
-		Clear: function(key) {
+		Clear: function() {
 			return window.sessionStorage.clear()
 		},
 		Get: function(key) {

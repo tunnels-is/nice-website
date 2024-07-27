@@ -1,0 +1,121 @@
+@media (max-width: 1000px) {
+
+  .light {
+    --content-shadow: 6px 6px 20px -3px rgba(0, 0, 0, 0.3);
+  }
+
+
+  .home-page {
+    gap: 100px;
+  }
+
+  .reverse-triforce-component {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+
+    .item {
+      height: 350px;
+      width: 100%;
+    }
+
+    .item1,
+    .item2,
+    .item3 {
+      left: 10%;
+    }
+
+    .text {
+      top: 45px !important;
+
+    }
+
+    img {
+      top: 0px !important;
+    }
+
+
+  }
+
+  .triforce-component {
+    padding-top: 0px !important;
+    margin-top: -50px;
+
+    .item {
+      height: 350px;
+      width: 100%;
+    }
+
+    .item1,
+    .item2,
+    .item3 {
+      left: 10%;
+    }
+
+    .text {
+      top: 160px !important;
+
+    }
+
+    img {
+      top: 0px !important;
+    }
+
+  }
+
+  .textimageright-component {
+    flex-direction: column;
+
+    .text {
+      text-align: center;
+      order: 1;
+    }
+
+    img {
+      margin: unset;
+      margin: auto;
+      order: 2;
+      position: unset !important;
+      width: 95%;
+      height: auto;
+    }
+  }
+
+  .textimageleft-component {
+    flex-direction: column;
+
+    .text {
+      text-align: center;
+      order: 1;
+      padding-top: 0px;
+    }
+
+    img {
+      margin: unset;
+      margin: auto;
+      order: 2;
+      position: unset !important;
+      width: 95%;
+      height: auto;
+    }
+  }
+
+  .banner {
+    height: 600px;
+
+    .right {
+      left: 70px;
+      top: 303px;
+      width: 66%;
+      min-width: 540px;
+    }
+
+    .top {
+      min-width: 650px;
+    }
+
+    .left {
+      display: none;
+    }
+  }
+
+}
