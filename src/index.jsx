@@ -10,6 +10,9 @@ import "./assets/style/index-mobile.scss"
 import STORE from "./store";
 import Home from "./pages/Home";
 import SideBar from "./components/SideBar";
+import Footer from "./components/Footer";
+import Basic from "./pages/Basic";
+import Download from "./components/Download";
 
 var rootEle = document.getElementById('root')
 const root = createRoot(rootEle);
@@ -18,26 +21,7 @@ const App = () => {
 	rootEle.classList.add("light")
 	const [hidden, setHidden] = useState(true)
 
-
-	const observer = new IntersectionObserver(entries => {
-		entries.forEach(entry => {
-			// console.dir(entry.target)
-			if (entry.isIntersecting) {
-				entry.target.classList.add('viewport-animate');
-			} else {
-				entry.target.classList.remove('viewport-animate');
-			}
-		})
-	});
-
 	useEffect(() => {
-		STORE.HomepageAnimationTags.forEach(a => {
-			let x = document.querySelector("." + a)
-			if (x) {
-				observer.observe(x);
-			}
-		})
-
 		const floater1 = document.getElementById('floater');
 		const floater2 = document.getElementById('floater2');
 		const innerHeight = window.innerHeight;
@@ -76,7 +60,7 @@ const App = () => {
 				f2t = 60
 				f2l = -40
 			}
-			console.log(prevIndex, trigger, rotateIndex)
+			// console.log(prevIndex, trigger, rotateIndex)
 			floater1.style.top = String(f1t) + "%";
 			floater1.style.right = String(f1r) + "%";
 
@@ -93,18 +77,19 @@ const App = () => {
 				<div id="floater2" className="floater2"></div>
 
 				<SideBar hidden={hidden} setHidden={setHidden} />
-				<div
-					className={`menu-overlay ${hidden ? "" : "show-overlay"}`}
-					onClick={() => setHidden(true)}
-				></div>
 
 				<div className={`content-wrapper ${hidden ? "" : "blur"}`}>
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/home" element={<Home />} />
+						<Route path="/individuals" element={<Basic />} />
+						<Route path="/developers" element={<Basic />} />
+						<Route path="/enterprise" element={<Basic />} />
 					</Routes>
 				</div>
 
+				<Download />
+				<Footer />
 			</HashRouter>
 		</React.StrictMode >
 	)

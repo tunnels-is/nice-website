@@ -4,25 +4,25 @@ const Banner = (props) => {
 	return (<div className={"banner viewport-hide " + props.tag1}>
 
 		<div className="top-text">
-			<h1 className="title">Made by geeks, for geeks</h1>
+			<h1 className="bigtitle">{props.title}</h1>
 			<p className="subtitle">
-				Cross-platform, lightweight, portable, multi-network VPN
+				{props.subtitle}
 			</p>
 		</div>
 
 		<img
 			className="top"
-			src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/W1.png"
+			src={props.img1}
 		/>
 
 		<img
 			className="left"
-			src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/W1.png"
+			src={props.img2}
 		/>
 
 		<img
 			className="right"
-			src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/W1.png"
+			src={props.img3}
 		/>
 
 	</div>)

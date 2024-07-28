@@ -6,42 +6,39 @@ const Triforce = (props) => {
 
 			<div className="item item1">
 
-				<div className="content text">
-					<div className="title">Title nr1</div>
-					Some text about something or something. Maybe some more text
+				<div className=" text subtitle">
+					{props.content1}
 				</div>
 
 				<img
 					className={`viewport-hide ` + props.tag1}
-					src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/clean-settings.png"
+					src={props.img1}
 				/>
 
 			</div>
 
 			<div className="item item2">
 
-				<div className="content text">
-					<div className="title">Title nr1</div>
-					Some text about something or something. Maybe some more text
+				<div className=" text subtitle">
+					{props.content2}
 				</div>
 
 				<img
 					className={`viewport-hide ` + props.tag2}
-					src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/clean-settings.png"
+					src={props.img2}
 				/>
 
 			</div>
 
 			<div className="item item3">
 
-				<div className="content text">
-					<div className="title">Title nr1</div>
-					Some text about something or something. Maybe some more text
+				<div className=" text subtitle">
+					{props.content3}
 				</div>
 
 				<img
 					className={`viewport-hide ` + props.tag3}
-					src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/clean-settings.png"
+					src={props.img3}
 				/>
 
 			</div>
