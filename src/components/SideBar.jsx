@@ -69,7 +69,9 @@ const SideBar = (props) => {
 
 				<div
 					className={`menu-overlay ${props.hidden ? "" : "show-overlay"}`}
-					onClick={() => props.setHidden(true)}
+					onClick={() => {
+						props.setHidden(true)
+					}}
 				></div>
 
 				<div
