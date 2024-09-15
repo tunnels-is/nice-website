@@ -79,17 +79,14 @@ const Home = () => {
 			tag1={"animate10"}
 		/>
 
-		<ReverseTriforce
-			content1={STORE.Content.Home.ReverseTriForce.Content1}
-			img1={STORE.Content.Home.ReverseTriForce.Img1}
-			content2={STORE.Content.Home.ReverseTriForce.Content2}
-			img2={STORE.Content.Home.ReverseTriForce.Img2}
-			content3={STORE.Content.Home.ReverseTriForce.Content3}
-			img3={STORE.Content.Home.ReverseTriForce.Img3}
-			tag1={"animate5"}
-			tag2={"animate6"}
-			tag3={"animate7"}
+		<TextImageRight
+			link={"/"}
+			title={STORE.Content.Home.ImageRight2.Title}
+			content={STORE.Content.Home.ImageRight2.Content}
+			img={STORE.Content.Home.ImageRight2.Img}
+			tag1={"animate11"}
 		/>
+
 
 	</div>)
 

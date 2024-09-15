@@ -11,8 +11,12 @@ import STORE from "./store";
 import Home from "./pages/Home";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
-import Basic from "./pages/Basic";
 import Download from "./components/Download";
+import Enterprise from "./pages/Enterprise";
+import DownloadPage from "./pages/Download";
+import Documentation from "./pages/Documentation";
+import Features from "./pages/Features";
+import Advanced from "./pages/Advanced";
 
 var rootEle = document.getElementById('root')
 const root = createRoot(rootEle);
@@ -70,6 +74,7 @@ const App = () => {
 
 	})
 
+
 	return (
 		<React.StrictMode>
 			<HashRouter >
@@ -82,13 +87,16 @@ const App = () => {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/home" element={<Home />} />
-						<Route path="/individuals" element={<Basic />} />
-						<Route path="/developers" element={<Basic />} />
-						<Route path="/enterprise" element={<Basic />} />
+						<Route path="/features" element={<Features />} />
+						<Route path="/advanced" element={<Advanced />} />
+						<Route path="/enterprise" element={<Enterprise />} />
+						<Route path="/download" element={<DownloadPage />} />
+
+						<Route path="/docs/" element={<Documentation />} />
+						<Route path="/docs/:tag" element={<Documentation />} />
 					</Routes>
 				</div>
 
-				<Download />
 				<Footer />
 			</HashRouter>
 		</React.StrictMode >

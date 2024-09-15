@@ -18,6 +18,7 @@ const Download = () => {
 			</a>
 		</div>
 
+
 		<div className="link-wrapper">
 			<a target="_blank" href={STORE.Content.Download.Windows} className="dl link windows">Windows</a>
 			<a target="_blank" href={STORE.Content.Download.MacOS} className="dl link macos">MacOS </a>

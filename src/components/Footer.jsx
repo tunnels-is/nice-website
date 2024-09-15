@@ -3,48 +3,41 @@ import React, { useEffect } from "react";
 import ScrollAnimate from "./ScrollAnimate";
 
 const footerLinks = [
+	{ text: "Individuals", url: "" },
+	{ text: "Developers", url: "" },
+	{ text: "Enterprise", url: "" },
+	{ text: "Download", url: "" },
+	{ text: "???", url: "" },
+
+	{ text: "Terms", url: "" },
+	{ text: "Terms (english)", url: "" },
 	{ text: "Home", url: "" },
 	{ text: "Home", url: "" },
 	{ text: "Home", url: "" },
+
+	{ text: "Terms", url: "" },
+	{ text: "Terms (english)", url: "" },
 	{ text: "Home", url: "" },
 	{ text: "Home", url: "" },
 	{ text: "Home", url: "" },
-	{ text: "Home", url: "" },
+
+	{ text: "Terms", url: "" },
+	{ text: "Terms (english)", url: "" },
 	{ text: "Home", url: "" },
 	{ text: "Home", url: "" },
 	{ text: "Home", url: "" },
 
 ]
 
+
+
 const Footer = () => {
 
 	const [initialize] = ScrollAnimate();
 
-	const numRows = 5;
-	const numCols = 10;
-	let count = 0
-	let total = numRows * numCols
-	let baseShade = 150
-
-	const generateShades = () => {
-		const shades = [];
-
-		while (count < total) {
-			const greyValue = baseShade;
-			const shade = `#${greyValue.toString(16).padStart(2, '0')}${greyValue.toString(16).padStart(2, '0')}${greyValue.toString(16).padStart(2, '0')}`;
-			shades.push(shade);
-			count++
-			baseShade += 2
-			// console.log(shade)
-		}
-
-		return shades;
-	};
-
-
 	useEffect(() => {
 		let animate = {}
-		shades?.forEach((k, i) => {
+		footerLinks?.forEach((k, i) => {
 			animate["footeranimate" + String(i)] = true
 		})
 
@@ -52,13 +45,12 @@ const Footer = () => {
 
 	})
 
-	const shades = generateShades().reverse();
 
 	return (
 		<div className="footer">
 			<div className="grey-container">
-				{shades.map((shade, index) => {
-					let item = footerLinks[index]
+				{footerLinks.map((i, index) => {
+					let item = i
 					let url = ""
 					let text = ""
 					if (item) {
@@ -67,11 +59,17 @@ const Footer = () => {
 					}
 
 					return (
-						<div key={index} className={`grey-div text link  viewport-hide footeranimate` + String(index)} style={{ backgroundColor: shade }}>{text}</div>
+						<div
+							key={index}
+							className={`grey-div text link  viewport-hide footeranimate` + String(index)}
+						// style={{ backgroundColor: shade }}
+						>
+							{text}
+						</div>
 					)
 				})}
 			</div>
-		</div>
+		</div >
 	);
 
 }
