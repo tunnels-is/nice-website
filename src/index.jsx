@@ -26,51 +26,6 @@ const App = () => {
 	const [hidden, setHidden] = useState(true)
 
 	useEffect(() => {
-		const floater1 = document.getElementById('floater');
-		const floater2 = document.getElementById('floater2');
-		const innerHeight = window.innerHeight;
-		let prevIndex = 0
-		let rotateIndex = 0
-
-		let f1t = -200
-		let f1r = -200
-
-		let f2t = -200
-		let f2l = -200
-
-		window.addEventListener('scroll', () => {
-
-			const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-			const trigger = Math.floor((scrollTop / innerHeight) / 0.7)
-			if (trigger > prevIndex) {
-				prevIndex = trigger
-			} else if (trigger < prevIndex) {
-				prevIndex = trigger
-			} else {
-				return
-			}
-
-			rotateIndex = trigger % 2
-			if (rotateIndex === 1) {
-				f1t = 60
-				f1r = -40
-
-				f2t = -200
-				f2l = -200
-			} else if (rotateIndex === 0) {
-				f1t = -200
-				f1r = -200
-
-				f2t = 60
-				f2l = -40
-			}
-			// console.log(prevIndex, trigger, rotateIndex)
-			floater1.style.top = String(f1t) + "%";
-			floater1.style.right = String(f1r) + "%";
-
-			floater2.style.top = String(f2t) + "%";
-			floater2.style.left = String(f2l) + "%";
-		});
 
 	})
 
@@ -78,8 +33,6 @@ const App = () => {
 	return (
 		<React.StrictMode>
 			<HashRouter >
-				<div id="floater" className="floater"></div>
-				<div id="floater2" className="floater2"></div>
 
 				<SideBar hidden={hidden} setHidden={setHidden} />
 

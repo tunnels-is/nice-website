@@ -622,13 +622,15 @@ body::-webkit-scrollbar {
   margin-top: 100px;
   display: flex;
 
+
   .doc-loader {
     position: relative;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .markdown-wrapper {
+    flex-grow: 1;
     border-left: 2px solid var(--c-shade3);
     border-top: 2px solid var(--c-shade3);
     padding-left: 20px;
@@ -639,7 +641,7 @@ body::-webkit-scrollbar {
 
     pre {
       code {
-        width: 100%;
+        width: fit-content;
         text-overflow: ellipsis;
         overflow-y: auto;
         text-wrap: pretty;
@@ -697,10 +699,12 @@ body::-webkit-scrollbar {
     }
 
     .section {
+      font-weight: bold;
       margin-top: 20px;
     }
 
     .level2 {
+      color: var(--c-shade4);
       font-size: 18px;
       margin-left: 20px;
     }

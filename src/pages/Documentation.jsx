@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
-import { FadeLoader } from 'react-spinners';
+import { useParams, useNavigate } from 'react-router-dom';
+import { FadeLoader, GridLoader } from 'react-spinners';
 
 import { Marked } from "marked";
 import { markedHighlight } from "marked-highlight";
@@ -26,20 +26,23 @@ const Documentation = () => {
 	const [guide, setGuide] = useState(undefined)
 	const [loading, setLoading] = useState(false)
 	const { tag } = useParams("tag")
+	const navigate = useNavigate()
 
 	useEffect(() => {
+		console.log("rerender")
 		if (tag === "" || !tag) {
 			changePage("Introduction")
 		} else {
 			changePage(tag)
 		}
-	}, [])
+	}, [tag])
 
 	const loadGuide = async (url) => {
 		if (url === "" || url === undefined) {
 			console.log("nothing!	")
 			return
 		}
+		setContent("");
 		const x = setTimeout(() => {
 			setLoading(true)
 		}, 100)
@@ -47,26 +50,57 @@ const Documentation = () => {
 			const response = await axios.get(base_url + url);
 			setContent(response.data);
 		} catch (err) {
+			setContent(`# 404 - section not found`)
 			console.dir(err)
 		}
 		setLoading(false)
 		clearTimeout(x)
 	};
 
-	const changePage = (tag) => {
+	const changePage = async (tag) => {
+		if (tag === "" || tag === undefined) {
+			setContent(`# 404 - section not found`)
+			return
+		}
+
+		setGuide(undefined)
+		setContent("");
+
+		let gg = undefined
 		STORE.DocMenu.forEach((m, i) => {
 			if (m.tag.toLowerCase() === tag.toLowerCase()) {
-				setGuide({ ...m, index: i })
-				loadGuide(m.file)
+				gg = { ...m, index: i }
+				// setGuide({ ...m, index: i })
+				// loadGuide(m.file)
 				return
 			}
 		})
+
+		if (!gg) {
+			setContent(`# 404 - section not found`)
+			return
+		}
+
+		const x = setTimeout(() => {
+			setLoading(true)
+		}, 100)
+
+		try {
+			const response = await axios.get(base_url + gg.file);
+			setContent(response.data);
+			setGuide({ ...gg })
+		} catch (err) {
+			setContent(`# 404 - section not found`)
+			console.dir(err)
+		}
+
+		setLoading(false)
+		clearTimeout(x)
 	}
 
 	const navigatePage = (index) => {
 		if (STORE.DocMenu[index]) {
-			setGuide({ ...STORE.DocMenu[index], index: index })
-			loadGuide(STORE.DocMenu[index].file)
+			navigate("/docs/" + STORE.DocMenu[index].tag)
 		}
 		return
 	}
@@ -81,9 +115,9 @@ const Documentation = () => {
 					return (
 						<div className={`${m.indent < 2 ? "section" : "level2"}  page`}
 							key={m.tag}
-							onClick={() => changePage(m.tag)}>
+							onClick={() => navigate("/docs/" + m.tag)}>
 							{m.indent === 2 &&
-								`_ `
+								`  `
 							}
 							{m.tag}
 						</div>
@@ -91,11 +125,12 @@ const Documentation = () => {
 				})}
 			</div>
 
-			<FadeLoader
-				className="doc-loader"
-				loading={loading} />
 
 			<div className="markdown-wrapper">
+				<GridLoader
+					speedMultiplier={2}
+					className="doc-loader"
+					loading={loading} />
 
 				{guide &&
 					<div className="button-wrapper">
@@ -118,10 +153,6 @@ const Documentation = () => {
 					<div className="markdown-content" dangerouslySetInnerHTML={{ __html: marked.parse(content) }}>
 					</div>
 				}
-
-
-
-
 
 			</div>
 		</div>

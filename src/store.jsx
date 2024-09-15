@@ -605,17 +605,17 @@ var STORE = {
 			},
 		},
 	},
-	base_url: "https://raw.githubusercontent.com/tunnels-is/nicelandvpn-desktop/main/",
+	base_url: "https://raw.githubusercontent.com/tunnels-is/nice-website/main/docs/",
 	DocMenu: [
-		{ tag: "Introduction", file: "README.md", indent: 1, },
-		{ tag: "Downloading", file: "COMPETITION.md", indent: 2, },
-		{ tag: "Registering", file: "PRIVATE-VPN.md", indent: 2, },
-		{ tag: "Connecting", file: "README.md", indent: 2, },
-		{ tag: "Disconnecting", file: "README.md", indent: 2, },
+		{ tag: "Introduction", file: "introduction.md", indent: 1, },
+		{ tag: "Downloading", file: "downloading.md", indent: 2, },
+		{ tag: "Registering", file: "registering.md", indent: 2, },
+		{ tag: "Connecting", file: "connecting.md", indent: 2, },
+		{ tag: "Disconnecting", file: "disconnecting.md", indent: 2, },
 
-		{ tag: "Advanced", file: "README.md", indent: 1, },
-		{ tag: "Routes", file: "COMPETITION.md", indent: 2, },
-		{ tag: "DNS", file: "README.md", indent: 2, },
+		{ tag: "Advanced", file: "advanced.md", indent: 1, },
+		{ tag: "Routes", file: "routes.md", indent: 2, },
+		{ tag: "DNS", file: "dns.md", indent: 2, },
 	],
 	GetAndSaveDomain: function() {
 		let host = window.location.host
