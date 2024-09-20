@@ -8,6 +8,9 @@ const SmallFeatures = (props) => {
 				<div key={f.Tag} className={`feature viewport-hide ${f.Tag} ${f.BG ? "feature-bg" : ""}`}>
 					<f.Icon height="50px" width="50px" />
 					<p className="content">
+						{f.Title}
+					</p>
+					<p className="content">
 						{f.Content}
 					</p>
 				</div>

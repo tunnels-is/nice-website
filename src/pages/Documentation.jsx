@@ -83,7 +83,7 @@ const Documentation = () => {
 
 		const x = setTimeout(() => {
 			setLoading(true)
-		}, 100)
+		}, 150)
 
 		try {
 			const response = await axios.get(base_url + gg.file);
@@ -112,12 +112,24 @@ const Documentation = () => {
 		<div className="doc-page">
 			<div className="doc-menu" >
 				{STORE.DocMenu.map(m => {
+
+					let classes = "page "
+					if (m.indent === 0) {
+						classes += "section"
+					}
+					if (m.indent === 1) {
+						classes += ""
+					}
+					if (m.indent === 2) {
+						classes += "level2"
+					}
+
 					return (
-						<div className={`${m.indent < 2 ? "section" : "level2"}  page`}
+						<div className={classes}
 							key={m.tag}
 							onClick={() => navigate("/docs/" + m.tag)}>
 							{m.indent === 2 &&
-								`  `
+								` `
 							}
 							{m.tag}
 						</div>
