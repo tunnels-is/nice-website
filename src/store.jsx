@@ -320,27 +320,10 @@ var STORE = {
 				Button: "Register Now",
 				Included: ["Support", "Money Back Guarantee", "Access all standard features", "Additional ???", "More Additional ???"],
 			}
-
 		],
 
 	},
-	base_url: "https://raw.githubusercontent.com/tunnels-is/nice-website/main/docs/",
-	DocMenu: [
-		{ tag: "Introduction", file: "introduction.md", indent: 0, },
-		{ tag: "Downloading", file: "downloading.md", indent: 2, },
-		{ tag: "Registering", file: "registering.md", indent: 2, },
-		{ tag: "Connecting", file: "connecting.md", indent: 2, },
-		{ tag: "Disconnecting", file: "disconnecting.md", indent: 2, },
-
-		{ tag: "Advanced", file: "advanced.md", indent: 0, },
-		{ tag: "Routes", file: "routes.md", indent: 2, },
-		{ tag: "DNS", file: "dns.md", indent: 2, },
-
-		{ tag: "", file: "seperator", indent: 0, },
-
-		{ tag: "Advanced", file: "advanced.md", indent: 1, },
-		{ tag: "Advanced", file: "advanced.md", indent: 1, },
-	],
+	MenuURL: "https://raw.githubusercontent.com/tunnels-is/nice-website/main/docs/menu.json",
 	GetAndSaveDomain: function() {
 		let host = window.location.host
 		let domain = "default"

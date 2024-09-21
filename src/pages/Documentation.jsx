@@ -8,7 +8,6 @@ import { markedHighlight } from "marked-highlight";
 import { hljs } from '../hljs/highlight.js';
 import STORE from '../store';
 
-const base_url = STORE.base_url
 
 const marked = new Marked(
 	markedHighlight({
@@ -27,8 +26,10 @@ const Documentation = () => {
 	const [loading, setLoading] = useState(false)
 	const { tag } = useParams("tag")
 	const navigate = useNavigate()
+	const [menu, setMenu] = useState({ "BaseURL": "", "Menu": [] })
 
 	useEffect(() => {
+		loadMenu()
 		console.log("rerender")
 		if (tag === "" || !tag) {
 			changePage("Introduction")
@@ -37,20 +38,14 @@ const Documentation = () => {
 		}
 	}, [tag])
 
-	const loadGuide = async (url) => {
-		if (url === "" || url === undefined) {
-			console.log("nothing!	")
-			return
-		}
-		setContent("");
+	const loadMenu = async () => {
 		const x = setTimeout(() => {
 			setLoading(true)
 		}, 100)
 		try {
-			const response = await axios.get(base_url + url);
-			setContent(response.data);
+			const response = await axios.get(STORE.MenuURL);
+			setMenu(JSON.parse(response.data))
 		} catch (err) {
-			setContent(`# 404 - section not found`)
 			console.dir(err)
 		}
 		setLoading(false)
@@ -111,7 +106,7 @@ const Documentation = () => {
 	return (
 		<div className="doc-page">
 			<div className="doc-menu" >
-				{STORE.DocMenu.map(m => {
+				{menu?.Menu?.map(m => {
 
 					let classes = "page "
 					if (m.indent === 0) {
