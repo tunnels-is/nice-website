@@ -95,17 +95,31 @@ const Documentation = () => {
 	}
 
 	const navigatePage = (index) => {
-		if (menu?.Menu[index]) {
+		if (menu?.Menu[index].tag === "") {
+			navigate("/docs/" + menu?.Menu[index + 1].tag)
+		} else if (menu?.Menu[index]) {
 			navigate("/docs/" + menu?.Menu[index].tag)
 		}
 		return
 	}
 	const getTag = (index) => {
-		console.log("GET TAG FOR:", index)
-		return menu?.Menu[index]?.tag
+		console.log("TAG:", index)
+		if (menu?.Menu[index] === undefined) {
+			return ""
+		} else if (menu?.Menu[index]?.tag === "") {
+			return menu?.Menu[index + 1]?.tag
+		} else {
+			return menu?.Menu[index]?.tag
+		}
 	}
 
 	console.dir(menu.Menu)
+	let prevTag = undefined;
+	let nextTag = undefined;
+	if (guide) {
+		prevTag = getTag(guide.index - 1)
+		nextTag = getTag(guide.index + 1)
+	}
 
 	return (
 		<div className="doc-page">
@@ -145,18 +159,22 @@ const Documentation = () => {
 
 				{guide &&
 					<div className="button-wrapper">
-						<div
-							onClick={() => navigatePage(guide.index - 1)}
-							className="button prev"
-						>
-							{''} {getTag(guide.index - 1)}
-						</div>
+						{prevTag &&
+							<div
+								onClick={() => navigatePage(guide.index - 1)}
+								className="button prev"
+							>
+								{''} {getTag(guide.index - 1)}
+							</div>
+						}
 
-						<div
-							onClick={() => navigatePage(guide.index + 1)}
-							className="button next">
-							{''} {getTag(guide.index + 1)}
-						</div>
+						{nextTag &&
+							<div
+								onClick={() => navigatePage(guide.index + 1)}
+								className="button next">
+								{''} {getTag(guide.index + 1)}
+							</div>
+						}
 					</div>
 				}
 

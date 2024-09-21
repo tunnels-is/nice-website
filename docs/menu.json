@@ -43,7 +43,7 @@
 		},
 		{
 			"tag": "",
-			"file": "seperator",
+			"file": "",
 			"indent": 0
 		},
 		{
@@ -52,9 +52,14 @@
 			"indent": 1
 		},
 		{
-			"tag": "Advanced 3",
+			"tag": "Advanced",
 			"file": "advanced.md",
 			"indent": 1
+		},
+		{
+			"tag": "Setup",
+			"file": "advanced-setup.md",
+			"indent": 2
 		}
 	]
 }
