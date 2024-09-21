@@ -44,7 +44,7 @@ const Documentation = () => {
 		}, 100)
 		try {
 			const response = await axios.get(STORE.MenuURL);
-			setMenu(JSON.parse(response.data))
+			setMenu(response.data)
 		} catch (err) {
 			console.dir(err)
 		}
@@ -62,7 +62,7 @@ const Documentation = () => {
 		setContent("");
 
 		let gg = undefined
-		STORE.DocMenu.forEach((m, i) => {
+		menu.Menu?.forEach((m, i) => {
 			if (m.tag.toLowerCase() === tag.toLowerCase()) {
 				gg = { ...m, index: i }
 				// setGuide({ ...m, index: i })
@@ -81,10 +81,11 @@ const Documentation = () => {
 		}, 150)
 
 		try {
-			const response = await axios.get(base_url + gg.file);
+			const response = await axios.get(menu?.BaseURL + gg.file);
 			setContent(response.data);
 			setGuide({ ...gg })
 		} catch (err) {
+			setGuide({ ...gg })
 			setContent(`# 404 - section not found`)
 			console.dir(err)
 		}
@@ -94,14 +95,17 @@ const Documentation = () => {
 	}
 
 	const navigatePage = (index) => {
-		if (STORE.DocMenu[index]) {
-			navigate("/docs/" + STORE.DocMenu[index].tag)
+		if (menu?.Menu[index]) {
+			navigate("/docs/" + menu?.Menu[index].tag)
 		}
 		return
 	}
 	const getTag = (index) => {
-		return STORE.DocMenu[index]?.tag
+		console.log("GET TAG FOR:", index)
+		return menu?.Menu[index]?.tag
 	}
+
+	console.dir(menu.Menu)
 
 	return (
 		<div className="doc-page">
