@@ -3,33 +3,42 @@ import { LayersIcon } from '@radix-ui/react-icons';
 const Version = "v2.1.0"
 
 var STORE = {
-	Name: "Niceland",
+	Name: "Tunnels",
+	DocMenu: { "BaseURL": "", "Menu": [] },
 	Content: {
 
+		ContactSales: {
+			Title: "Contact Us",
+			link: "mailto:support@tunnels.is",
+			linkTitle: "support @ tunnels.is"
+		},
 		Download: {
-			Title: "Download Niceland",
+			Title: "Download Tunnels",
 			Subtitle: "click here for all available releases",
-			AllLink: "https://github.com/tunnels-is/NicelandVPN/releases/latest",
-			MacOS: "https://github.com/tunnels-is/NicelandVPN/releases/download/" + Version + "/NicelandVPN-MacOS-app.zip",
-			Windows: "https://github.com/tunnels-is/NicelandVPN/releases/download/" + Version + "/NicelandVPN-Windows-app.exe",
-			Linux: "https://github.com/tunnels-is/NicelandVPN/releases/latest",
+			AllLink: "https://github.com/tunnels-is/TunnelsVPN/releases/latest",
+			MacOS: "https://github.com/tunnels-is/TunnelsVPN/releases/download/" + Version + "/TunnelsVPN-MacOS-app.zip",
+			Windows: "https://github.com/tunnels-is/TunnelsVPN/releases/download/" + Version + "/TunnelsVPN-Windows-app.exe",
+			Linux: "https://github.com/tunnels-is/TunnelsVPN/releases/latest",
+		},
+		Pricing: {
+			Title: "Get your license key here!"
 		},
 
 		Home: {
 			Banner: {
-				Title: "Some awesome title",
-				Subtitle: "lightweight - route-based -  vpn",
+				Title: "Tunnels",
+				Subtitle: "Advanced Networking Utility",
 				Img1: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-2.png",
 				Img2: "https://raw.githubusercontent.com/tunnels-is/media/master/web/orgs.png",
 				Img3: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-3.png",
 			},
 
 			TriForce: {
-				Content1: "16MB on disk",
+				Content1: "Small Disk Size",
 				Img1: "https://raw.githubusercontent.com/tunnels-is/media/master/web/size-on-disk.png",
-				Content2: "15MB in Memory",
+				Content2: "Small Memory Footprint",
 				Img2: "https://raw.githubusercontent.com/tunnels-is/media/master/web/size-in-memory.png",
-				Content3: "Just Download And Run",
+				Content3: "No Install Required",
 				Img3: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/clean-settings.png",
 			},
 
@@ -42,113 +51,141 @@ var STORE = {
 				Img3: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/clean-settings.png",
 			},
 
-			ImageLeft1: {
-				Title: "The individual",
-				Content: "Niceland has all the privacy and security features users have come to expect. No logging, no tracking, no spying. Only tried and true encryption algorithms as implemented by security experts are used",
+			ImageRight1: {
+				Title: "DNS Blackhole",
+				Content: "Tunnels prevents un-wanted DNS queries from leaving your computer.<br/><br/> This feature offers a wide range of functionality, DNS query insights and daily blocklist updates.",
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-2.png",
 			},
 
-			ImageRight1: {
-				Title: "10x Developers",
-				Content: "For developers, we have implemented an extensive list of features to allow multi-network connectivity without any DNS problems. Connect to and control multiple cloud/datacenter environments are the same time",
+			ImageLeft1: {
+				Title: "Advanced Networking Utility",
+				Content: "Tunnels makes connecting to multiple networks at the same time easy. <br/><br/>Connect to the office, the cloud, your home or anywhere, all at once. Tunnels is designed to facilitate easy configurations for each network and client specific configuration, just in case there is a conflict on the network.",
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/all-connections.png",
 			},
 
 			ImageLeft2: {
 				Title: "Enterprise",
-				Content: "Niceland has been optimized for large scale deployments and easy user access control. Full-scale on premis deployments can benefit from a reduced attack surface via a special reverse networking method",
+				Content: "Tunnels has been engineered to scale to millions of users and can easily be deployed on-premis using bare metal server or kubernetes.<br/><br/> IAM management is already a part of Tunnels and extentions can be made to fit the needs of any external IAM system.",
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/orgs.png",
 			},
 
 			ImageRight2: {
 				Title: "Dark Mode!",
-				Content: ".... TBD",
+				Content: "By popular demand, we give you... a dark theme.",
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-1.png",
 			},
 		},
-		Individual: {
+		DNSPage: {
 			SmallBanner: {
-				Title: "For Security And Privacy",
-				Subtitle: "No logging, no tracking, no spying.",
+				Title: "DNS Security",
+				Subtitle: "with daily security updates",
 			},
-			TextImageLeft: {
-				Title: "DNS Protection",
-				Content: "Protect your DNS queries with Niceland's in-build DNS proxy. Transform your DNS to DNS over HTTPS, block domains based on categories, inspect your DNS history, receive daily block list updates and more..",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/dns-lists.png",
 
-			},
-			TextImageRight: {
-				Title: "TODO: SOMETHING JUICY",
-				Content: "....",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/W1.png"
+			DNSProtection: {
+				Title: "Defend Your DNS",
+				Content: `Tunnels offers a built-in DNS Proxy which comes with extensive blacklisting features and daily block list updates.`,
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/dns-block.png",
 			},
 
 		},
-		Developers: {
+		FeaturePage: {
 			SmallBanner: {
-				Title: "Multi-Network VPN",
-				Subtitle: "Manage all your environments in one place",
+				Title: "How Does It Work ?",
+				Subtitle: "It's just tunnels and servers",
 			},
-			TextImageLeft: {
-				Title: "Multi Tenancy",
-				Content: "Using Niceland you can connect to multiple VPN networks at the same time, resolve NAT conflicts and register custom DNS records using simple json configs",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-3.png",
+
+			TunnelsToServersDiagram: {
+				Title: "Tunnels And Servers",
+				Content: `......`,
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/diagrams/tunnels-servers.png",
 			},
-			TextImageRight: {
-				Title: "Fully Customizable",
-				Content: "All configuration are editable as JSON configs. We have built a code editor into the application, but you can edit these configs with any editor of your choosing",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/inline-editor.png"
+
+			PrivateServers: {
+				Title: "Servers",
+				Content: "Private servers can be registered for free without device or user limits. These servers are entirely user controlled and operated.<br><br> <b>Tunnels</b> has no access to these servers, it only provides IAM services.",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/private-servers.png"
 			},
-			TextImageLeft2: {
-				Title: "Custom DNS, NAT and Routes",
-				Content: "Niceland can fully control nat, routers and custom dns on the client side as well as on the server side, letting you resolve issues effortlessly",
+			Tunnels: {
+				Title: "Tunnels",
+				Content: "Tunnel configuration live in the users json config and can be modified using the in-line editor tool or any text editor. <br><br>Configs can easily be ported from one user to another with a simple copy/paste, making configuration management easy at scale.",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/tunnels-editor.png"
+			},
+
+			DynamicNetworking: {
+				Title: "Dynamic Networking",
+				Content: `<b>Networks</b>, <b>Routes</b> and <b>NAT</b> can be applied dynamically in the server config or the <b>tunnel</b>.<br><br> Each <b>tunnel</b> will update their configurations at an interval, making company wide re-configurations easy at scale.`,
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/routes-and-networks.png",
+			},
+
+			AbstractNAT: {
+				Title: "Abstract NAT",
+				Content: `<b>Tunnels</b> can perform Network Address Translation outside of the scope of local networks. <br><br> This allows <b>Tunnels</b> to resolve IP Address conflicts without having to change anything on the network level.`,
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/nat-route-dns.png",
+			},
+
+
+			DNSCorrectness: {
+				Title: "DNS Correctness",
+				Content: `Tunnels supports custom A, TXT and CNAME recods and high level A records can be forwarded to specific <b>tunnels</b> to be resolved on sub-net DNS servers.<br><br>Tunnels also comes with <a href="https://tunnels.is/#/dns">DNS Security</a> features`,
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/custom-dns.png",
+			},
+
+			TextImageLeft4: {
+				Title: "Kubernetes Networking",
+				Content: "You can use Tunnels to secure your kubernetes control plane. You can deploy on the host or from within the cluster",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/k8s.png"
+			},
+
+			TextImageRight3: {
+				Title: "All the things",
+				Content: "All configuration are editable as JSON configs. We have built a code editor into the application, but you can edit these configs with any editor of your choosing",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/allthethings.png"
 			},
 
 		},
 		Enterprise: {
 			SmallBanner: {
-				Title: "????",
-				Subtitle: "??????",
+				Title: "Bigger Scale",
+				Subtitle: "Tunnels was designed to be lightweight and scale big",
+			},
+			TextImageRight1: {
+				Title: "???",
+				Content: "Automatically connect your employees to all of their networks, all at once. Tunnels is designed to be install-free, simply copy/paste and run. This makes managing a large number of users, simple and pain free.<br/><br/> Company wide configurations can be distributed as simple files to users in multitudes of ways or automatically updated by system administrators.",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/allthethings.png"
 			},
 			TextImageLeft: {
-				Title: "On Premis Installations",
-				Content: "Niceland support both bare-metal and container environment deployments.",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-3.png",
+				Title: "Reduced Attack Surface",
+				Content: `Our endpoints are written in golang, no modules, no plugins, no 3rd party services, only golang. This method of simplicity reduces the oppurtunities which hackers have to attack the platform.
+<br/><br/><a href="https://go.dev">Golang</a> is an open source programming language made by google and is under strict review by security experts on a daily basis.`,
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/gopher.png",
 			},
-			TextImageRight: {
-				Title: "24/7 Support",
-				Content: "",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/inline-editor.png"
-			},
-			TextImageLeft2: {
-				Title: "Be Everywhere At All Times",
-				Content: "",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/nat-route-dns.png",
-			},
-
 		},
 
 		Features: {
 			Basic: {
 				NoPersistance: {
-					Title: "No System Persistence",
-					Content: "Niceland does not leave any services or hidden files on your system",
+					Title: "No Persistence",
+					Content: "Tunnels does not leave any services or hidden files on your system",
 					Icon: LayersIcon,
 				},
 				NoInstallation: {
-					Title: "No Install Required",
-					Content: "Just download Niceland and place it wherever you like, even on a USB.",
+					Title: "Portable",
+					Content: "Just download Tunnels and place it wherever you like, even on a USB.",
 					Icon: LayersIcon,
 				},
 				AnonymousAccounts: {
-					Title: "Anonymous Accounts",
+					Title: "Anonymity",
 					Content: "Accounts can be created using usernames or uuids. No personal information required",
 					Icon: LayersIcon,
 				},
 				AnonymousPayments: {
-					Title: "Anonymous Top-Ups",
-					Content: "Niceland offers anonymous license keys which can be used to top-up your account",
+					Title: "Account Top-Ups",
+					Content: "Tunnels offers anonymous license keys which can be used to top-up your account",
+					Icon: LayersIcon,
+				},
+				DNSCustom: {
+					Title: "Custom DNS Records",
+					Content: "Register custom A, TXT and CNAME records for any domain",
 					Icon: LayersIcon,
 				},
 				DNSTransformation: {
@@ -156,62 +193,62 @@ var STORE = {
 					Content: "Our in-build DNS server can translate your normal DNS to DNS over HTTPS",
 					Icon: LayersIcon,
 				},
+				DNSWhoIS: {
+					Title: "WHOIS With A Click",
+					Content: "Get whois information for any resolved domain with the click of a button",
+					Icon: LayersIcon,
+				},
+				DNSCustomBlocklist: {
+					Title: "Custom Block Lists",
+					Content: "Use your own block lists to block domains",
+					Icon: LayersIcon,
+				},
 				DNSLeakPrevention: {
-					Title: "Protect your DNS",
-					Content: "Use our in-build DNS proxy to completely prevent DNS leaks, even without a Niceland account",
+					Title: "DNS Leak Protection",
+					Content: "Use our built-in DNS proxy to completely prevent DNS leaks, even without a Tunnels account",
 					Icon: LayersIcon,
 				},
 				IPV6Blocking: {
 					Title: "IPv6 Leak Prevention",
-					Content: "Niceland can be configured to deny connections if IPv6 is enabled",
+					Content: "Tunnels can be configured to deny connections if IPv6 is enabled",
+					Icon: LayersIcon,
+				},
+				DNSAnalytics: {
+					Title: "DNS Analytics",
+					Content: "Get real time DNS analytics",
 					Icon: LayersIcon,
 				},
 				DNSBlocking: {
-					Title: "Block unwanted DNS queries",
-					Content: "Niceland has a built in DNS blocking mechanisms, available for free",
+					Title: "DNS Protection",
+					Content: "Tunnels has a built in DNS blocking mechanisms, available for free",
 					Icon: LayersIcon,
 				},
 				DNSDailyUpdates: {
-					Title: "Daily DNS Blocklist Updates",
-					Content: "Niceland creates combined DNS blocklists from popular sources, everyday. Users can access these sources with the press of a button",
+					Title: "Daily Updates",
+					Content: "Tunnels creates combined DNS blocklists from popular sources, everyday. Users can access these sources with the press of a button",
 					Icon: LayersIcon,
 				},
 				Torrenting: {
 					Title: "Torrent Friendly Servers",
-					Content: "Niceland offers special servers which are torrent friendly",
+					Content: "Tunnels offers special servers which are torrent friendly",
 					Icon: LayersIcon,
 				},
 
 			},
 			Advanced: {
 				CommunitySourceAccess: {
-					Title: "Not So Source Available?",
-					Content: "Join the community to gain access to our source code",
+					Title: "Open Source Software",
+					Content: "Our server and client implementations are open sourced on github, links can be found at the bottom of the page",
 					Icon: LayersIcon,
 				},
-				NicelandOnOpenWRT: {
-					Title: "Niceland on OpenWRT",
+				TunnelsOnOpenWRT: {
+					Title: "Tunnels on OpenWRT",
 					Content: "Our NAT protocol was designed to work on unix based router firmware",
-					Icon: LayersIcon,
-				},
-				ServerAndClientSideNAT: {
-					Title: "Flexible NAT",
-					Content: "NAT Can be configured for each network, but also re-configured by the user in-case of conflicts",
-					Icon: LayersIcon,
-				},
-				ServerAndClientSideDNS: {
-					Title: "Flexible DNS",
-					Content: "Unique DNS records can be configured for each network but also re-configured by the user in-case of conflicts",
-					Icon: LayersIcon,
-				},
-				SeverAndClientSideRoutes: {
-					Title: "Routing Base VPNs",
-					Content: "Multiple routes can be configured be network, but also re-configured client side",
 					Icon: LayersIcon,
 				},
 				OptimizedSoftware: {
 					Title: "Multi-threaded & modern language",
-					Content: "Niceland is built from the ground up using Golang, a multi-threaded modern programming language",
+					Content: "Tunnels is built from the ground up using Golang, a multi-threaded modern programming language",
 					Icon: LayersIcon,
 				},
 				PerUserEncryptedStreams: {
@@ -220,51 +257,48 @@ var STORE = {
 					Icon: LayersIcon,
 				},
 			},
-			EnterpriseUserManagement: {
-				Title: "User Management",
-				Content: "Niceland includes a group based user and endpoint management with an API interface",
-				Icon: LayersIcon,
+			Enterprise: {
+				CustomIntegration: {
+					Title: "Custom Integrations",
+					Content: "We are always open to creating custom integration when the need arises.",
+					Icon: LayersIcon,
+				},
+				UserManagement: {
+					Title: "User Management",
+					Content: "Group based user management is built into the platform.",
+					Icon: LayersIcon,
+				},
+				Support247: {
+					Title: "24/7 Support",
+					Content: "Enterprise clients receive 24/7 support via all of our support platforms",
+					Icon: LayersIcon,
+				},
+				OnPremisInstall: {
+					Title: "On Premise",
+					Content: "Tunnels support full on-premis deployments which are essential for passing security audits",
+					Icon: LayersIcon,
+				},
+				HighlyScalable: {
+					Title: "Scales With Growth",
+					Content: "100 users or 1000000 users, it makes no difference, our platform was design to fit even the largest companies.",
+					Icon: LayersIcon,
+				},
+				NoHardware: {
+					Title: "No Hardware",
+					Content: "No need to buy expensive hardware, our platform runs on whatever you have available, as long as it runs linux.",
+					Icon: LayersIcon,
+				},
+				NoVendorLockin: {
+					Title: "No Vendor Lock",
+					Content: "Our platform can be deployed on any network without extensive configurations. This means you will not be vendor locked.",
+					Icon: LayersIcon,
+				},
 			},
-			Support247: {
-				Title: "24/7 Support",
-				Content: "Enterprise clients receive 24/7 support via all of our support platforms",
-				Icon: LayersIcon,
-			},
-			OnPremisInstall: {
-				Title: "On Premis",
-				Content: "Niceland support full on-premis deployments on bare-metal or kubernetes",
-				Icon: LayersIcon,
-			},
-			HighlyScalable: {
-				Title: "Infinite Scale",
-				Content: "10 users or 100.000 users, it makes no difference, Niceland can scale to meet any needs",
-				Icon: LayersIcon,
-			},
-			EasyDeploymentAtScale: {
-				Title: "Niceland At Scale",
-				Content: "All internal modules are deployed as single binaries without installation. Making it easy for development operations",
-				Icon: LayersIcon,
-			},
-			EasyConfigurationAtScale: {
-				Title: "Distributable Configurations",
-				Content: "Niceland client apps use a JSON config which can be deployed at scale via management software",
-				Icon: LayersIcon,
-			},
-			ReducedAttackSurface: {
-				Title: "Minimal Attack Surface",
-				Content: "Niceland eliminates the need for exposed ports, our edge nodes use reverse tunneling to form per-user encrypted streams",
-				Icon: LayersIcon,
-			},
-			SecurityAndAuditing: {
-				Title: "?",
-				Content: "?",
-				Icon: LayersIcon,
-			}
 		},
 	},
 	Temp: {
 		Title: "Title number one",
-		Content: `The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.`,
+		Content: `The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H.Rackham.`,
 		ContentSmall: `The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.`,
 		Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/W1.png",
 		ImgSmall: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/clean-settings.png",
@@ -298,28 +332,25 @@ var STORE = {
 		subs: [
 			{
 				Title: "1 Month",
-				Per: "/ month",
-				Price: 9,
+				Price: 7,
 				URL: "https://nicelandvpn.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3",
-				Button: "Register Now",
-				Included: ["Support", "Money Back Guarantee", "Access all standard features"],
+				Button: "One Month",
+				Included: ["Network Access", "Money Back Guarantee", "Support"],
 			},
 			{
-				Title: "6 Month",
-				Per: "/ 6 months",
-				Price: 49,
-				URL: "https://nicelandvpn.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361",
-				Button: "Register Now",
-				Included: ["Support", "Money Back Guarantee", "Access all standard features", "Additional ???"],
-			},
-			{
-				Title: "12 Month",
-				Per: "/ 12 months",
-				Price: 69,
+				Title: "12 Months",
+				Price: 5,
 				URL: "https://nicelandvpn.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a",
-				Button: "Register Now",
-				Included: ["Support", "Money Back Guarantee", "Access all standard features", "Additional ???", "More Additional ???"],
-			}
+				Button: "One Year",
+				Included: ["- Network Access", "- Money Back Guarantee", "- Support"],
+			},
+			{
+				Title: "6 Months",
+				Price: 6,
+				URL: "https://nicelandvpn.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361",
+				Button: "Six Months",
+				Included: ["- Network Access", "- Money Back Guarantee", "- Support"],
+			},
 		],
 
 	},

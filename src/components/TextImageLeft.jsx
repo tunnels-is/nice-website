@@ -1,10 +1,14 @@
 import React from "react";
 
 const TextImageLeft = (props) => {
-	return (<div className="textimageleft-component">
+	let shadow = "shadow"
+	if (props.shadow === false) {
+		shadow = ""
+	}
+	return (<div className={`${props.className} textimageleft-component`}>
 
 		<img
-			className={props.tag1 + ` viewport-hide`}
+			className={`${props.tag1} ${shadow} viewport-hide`}
 			src={props.img}
 		/>
 
@@ -15,7 +19,8 @@ const TextImageLeft = (props) => {
 			{!props.link &&
 				<div className="title">{props.title}</div>
 			}
-			{props.content}
+			<div dangerouslySetInnerHTML={{ __html: props.content }}>
+			</div>
 		</div>
 
 

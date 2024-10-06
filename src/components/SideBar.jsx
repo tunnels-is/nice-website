@@ -7,9 +7,7 @@ import {
 	ExitIcon,
 	ExternalLinkIcon,
 	InfoCircledIcon,
-	LayersIcon,
 	QuestionMarkCircledIcon,
-	Share2Icon,
 } from '@radix-ui/react-icons'
 
 const IconWidth = 23
@@ -26,14 +24,15 @@ const SideBar = (props) => {
 	const menu = {
 		groups: [
 			{
-				title: "Niceland",
+				title: "Tunnels",
 				route: "home",
 				user: true,
 				items: [
 					{ icon: ExternalLinkIcon, label: "Features", route: "features" },
-					{ icon: ExitIcon, label: "Advanced", route: "Advanced" },
+					{ icon: EnterIcon, label: "DNS Security", route: "dns" },
 					{ icon: EnterIcon, label: "Enterprise", route: "enterprise" },
 					{ icon: EnterIcon, label: "Download", route: "download" },
+					{ icon: EnterIcon, label: "Pricing", route: "Pricing" },
 				]
 			},
 			{
@@ -43,8 +42,6 @@ const SideBar = (props) => {
 				items: [
 					{ icon: AccessibilityIcon, label: "Documentation", route: "docs", },
 					{ icon: EnterIcon, label: "Timeline", url: "https://calendar.google.com/calendar/embed?src=support%40nicelandvpn.is" },
-					{ icon: InfoCircledIcon, label: "Help", route: "help", },
-					{ icon: QuestionMarkCircledIcon, label: "FAQ", route: "guides", },
 				]
 			}
 
@@ -73,7 +70,7 @@ const SideBar = (props) => {
 				</svg>
 				<div className="menu-title"
 					onClick={() => navHandler("/home")}	>
-					Niceland
+					Tunnels
 				</div>
 
 

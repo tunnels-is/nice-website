@@ -1,14 +1,13 @@
 import React from "react";
 
-const TextImageRight = (props) => {
+const TextImageCenter = (props) => {
 	let shadow = "shadow"
 	if (props.shadow === false) {
 		shadow = ""
 	}
+	return (<div className={`${props.className} textimagecenter-component`}>
 
-	return (<div className="textimageright-component">
-
-		<div className="content text">
+		<div className={`content text`}>
 			{props.link &&
 				<a href={"#" + props.link} className="title link">{props.title}</a>
 			}
@@ -16,7 +15,6 @@ const TextImageRight = (props) => {
 				<div className="title">{props.title}</div>
 			}
 			<div dangerouslySetInnerHTML={{ __html: props.content }}>
-
 			</div>
 		</div>
 
@@ -25,8 +23,11 @@ const TextImageRight = (props) => {
 			src={props.img}
 		/>
 
+
+
 	</div>)
+
 }
 
-export default TextImageRight;
+export default TextImageCenter;
 

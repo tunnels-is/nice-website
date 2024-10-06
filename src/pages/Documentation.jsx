@@ -26,30 +26,40 @@ const Documentation = () => {
 	const [loading, setLoading] = useState(false)
 	const { tag } = useParams("tag")
 	const navigate = useNavigate()
-	const [menu, setMenu] = useState({ "BaseURL": "", "Menu": [] })
+	const [menu, setMenu] = useState(STORE.DocMenu)
 
 	useEffect(() => {
-		loadMenu()
-		console.log("rerender")
-		if (tag === "" || !tag) {
-			changePage("Introduction")
-		} else {
-			changePage(tag)
+
+		let loadIn = async function() {
+			await loadMenu()
+			if (tag === "" || !tag) {
+				changePage("Introduction")
+			} else {
+				changePage(tag)
+			}
 		}
+		loadIn()
+
 	}, [tag])
 
 	const loadMenu = async () => {
+		if (STORE.DocMenu?.Menu?.length > 0) {
+			return
+		}
+
 		const x = setTimeout(() => {
 			setLoading(true)
-		}, 100)
+		}, 150)
 		try {
+
 			const response = await axios.get(STORE.MenuURL);
 			setMenu(response.data)
+			STORE.DocMenu = response.data
 		} catch (err) {
 			console.dir(err)
 		}
-		setLoading(false)
 		clearTimeout(x)
+		setLoading(false)
 	};
 
 	const changePage = async (tag) => {
@@ -62,11 +72,17 @@ const Documentation = () => {
 		setContent("");
 
 		let gg = undefined
-		menu.Menu?.forEach((m, i) => {
+		let list = STORE.DocMenu
+
+		if (menu?.Menu?.length > 0) {
+			list = menu
+		}
+
+		console.dir(menu)
+		console.dir(list)
+		list?.Menu.forEach((m, i) => {
 			if (m.tag.toLowerCase() === tag.toLowerCase()) {
 				gg = { ...m, index: i }
-				// setGuide({ ...m, index: i })
-				// loadGuide(m.file)
 				return
 			}
 		})
@@ -80,8 +96,15 @@ const Documentation = () => {
 			setLoading(true)
 		}, 150)
 
+		let url = ""
+		if (menu.BaseURL !== "") {
+			url = menu.BaseURL
+		} else {
+			url = STORE.DocMenu.BaseURL
+		}
+
 		try {
-			const response = await axios.get(menu?.BaseURL + gg.file);
+			const response = await axios.get(url + gg.file);
 			setContent(response.data);
 			setGuide({ ...gg })
 		} catch (err) {
@@ -103,7 +126,6 @@ const Documentation = () => {
 		return
 	}
 	const getTag = (index) => {
-		console.log("TAG:", index)
 		if (menu?.Menu[index] === undefined) {
 			return ""
 		} else if (menu?.Menu[index]?.tag === "") {
@@ -113,7 +135,6 @@ const Documentation = () => {
 		}
 	}
 
-	console.dir(menu.Menu)
 	let prevTag = undefined;
 	let nextTag = undefined;
 	if (guide) {

@@ -3,29 +3,29 @@ import React, { useEffect } from "react";
 import ScrollAnimate from "./ScrollAnimate";
 
 const footerLinks = [
-	{ text: "Individuals", url: "" },
-	{ text: "Developers", url: "" },
-	{ text: "Enterprise", url: "" },
-	{ text: "Download", url: "" },
-	{ text: "???", url: "" },
+	{ text: "Download", url: "download" },
+	{ text: "Pricing", url: "pricing" },
+	{ text: "", url: "" },
+	{ text: "Documentation", url: "docs" },
+	{ text: "X", url: "x.com/??" },
 
-	{ text: "Terms", url: "" },
-	{ text: "Terms (english)", url: "" },
-	{ text: "Home", url: "" },
-	{ text: "Home", url: "" },
-	{ text: "Home", url: "" },
+	{ text: "Features", url: "features" },
+	{ text: "", url: "" },
+	{ text: "", url: "" },
+	{ text: "Timeline", url: "https://calendar.google.com/calendar/embed?src=support%40nicelandvpn.is" },
+	{ text: "Discord", url: "???" },
 
-	{ text: "Terms", url: "" },
-	{ text: "Terms (english)", url: "" },
-	{ text: "Home", url: "" },
-	{ text: "Home", url: "" },
-	{ text: "Home", url: "" },
+	{ text: "Advanced", url: "advanced" },
+	{ text: "", url: "" },
+	{ text: "", url: "" },
+	{ text: "", url: "" },
+	{ text: "Slack", url: "??" },
 
-	{ text: "Terms", url: "" },
-	{ text: "Terms (english)", url: "" },
-	{ text: "Home", url: "" },
-	{ text: "Home", url: "" },
-	{ text: "Home", url: "" },
+	{ text: "Enterprise", url: "enterprise" },
+	{ text: "", url: "" },
+	{ text: "", url: "" },
+	{ text: "", url: "" },
+	{ text: "", url: "" },
 
 ]
 

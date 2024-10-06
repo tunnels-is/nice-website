@@ -30,7 +30,6 @@ const Home = () => {
 		window.scrollTo(0, 0)
 	}, [])
 
-	console.dir(STORE.Content.Home)
 	return (<div className="home-page">
 
 		<Banner
