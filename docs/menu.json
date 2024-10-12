@@ -60,6 +60,11 @@
 			"tag": "Setup",
 			"file": "advanced-setup.md",
 			"indent": 2
+		},
+		{
+			"tag": "Post Setup",
+			"file": "advanced-setup.md",
+			"indent": 2
 		}
 	]
 }
