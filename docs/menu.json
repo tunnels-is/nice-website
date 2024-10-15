@@ -47,23 +47,18 @@
 			"indent": 0
 		},
 		{
-			"tag": "Advanced 2",
-			"file": "advanced.md",
-			"indent": 1
-		},
-		{
-			"tag": "Advanced",
-			"file": "advanced.md",
+			"tag": "Private Servers",
+			"file": "ps.md",
 			"indent": 1
 		},
 		{
 			"tag": "Setup",
-			"file": "advanced-setup.md",
+			"file": "ps-setup.md",
 			"indent": 2
 		},
 		{
-			"tag": "Post Setup",
-			"file": "advanced-setup.md",
+			"tag": "??",
+			"file": "ps-random.md",
 			"indent": 2
 		}
 	]

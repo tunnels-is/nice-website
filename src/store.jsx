@@ -28,9 +28,9 @@ var STORE = {
 			Banner: {
 				Title: "Tunnels",
 				Subtitle: "Advanced Networking Utility",
-				Img1: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-2.png",
-				Img2: "https://raw.githubusercontent.com/tunnels-is/media/master/web/orgs.png",
-				Img3: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-3.png",
+				Img1: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/tunnels-editor.png",
+				Img2: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/private-servers.png",
+				Img3: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/dns-block.png",
 			},
 
 			TriForce: {
@@ -54,25 +54,25 @@ var STORE = {
 			ImageRight1: {
 				Title: "DNS Blackhole",
 				Content: "Tunnels prevents un-wanted DNS queries from leaving your computer.<br/><br/> This feature offers a wide range of functionality, DNS query insights and daily blocklist updates.",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-2.png",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/dns-block.png",
 			},
 
 			ImageLeft1: {
 				Title: "Advanced Networking Utility",
 				Content: "Tunnels makes connecting to multiple networks at the same time easy. <br/><br/>Connect to the office, the cloud, your home or anywhere, all at once. Tunnels is designed to facilitate easy configurations for each network and client specific configuration, just in case there is a conflict on the network.",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/all-connections.png",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/private-servers.png",
 			},
 
 			ImageLeft2: {
 				Title: "Enterprise",
 				Content: "Tunnels has been engineered to scale to millions of users and can easily be deployed on-premis using bare metal server or kubernetes.<br/><br/> IAM management is already a part of Tunnels and extentions can be made to fit the needs of any external IAM system.",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/orgs.png",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/orgs-final.png",
 			},
 
 			ImageRight2: {
-				Title: "Dark Mode!",
-				Content: "By popular demand, we give you... a dark theme.",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/home-banner-1.png",
+				Title: "Dark Mode",
+				Content: "By popular demand..",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/dark-mode.png",
 			},
 		},
 		DNSPage: {
@@ -80,13 +80,11 @@ var STORE = {
 				Title: "DNS Security",
 				Subtitle: "with daily security updates",
 			},
-
 			DNSProtection: {
 				Title: "Defend Your DNS",
 				Content: `Tunnels offers a built-in DNS Proxy which comes with extensive blacklisting features and daily block list updates.`,
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/dns-block.png",
 			},
-
 		},
 		FeaturePage: {
 			SmallBanner: {
@@ -95,8 +93,15 @@ var STORE = {
 			},
 
 			TunnelsToServersDiagram: {
-				Title: "Tunnels And Servers",
-				Content: `......`,
+				Title: "Core Concepts",
+				Content: `
+- <b>Services</b> provide networking functionality to the client<br/>
+- <b>Tunnels</b> process and deliver packets over encrypted connections<br/> 
+- <b>Servers</b> forward packets to designated networks<br/>
+
+<br><br>
+Tunnels is essentially a network multiplexer and DNS proxy.
+`,
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/diagrams/tunnels-servers.png",
 			},
 

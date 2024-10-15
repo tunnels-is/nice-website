@@ -98,7 +98,6 @@ const Features = () => {
 			tag1={"a4"}
 		/>
 
-
 		<TextImageLeft
 			title={STORE.Content.FeaturePage.DynamicNetworking.Title}
 			content={STORE.Content.FeaturePage.DynamicNetworking.Content}
