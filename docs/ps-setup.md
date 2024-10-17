@@ -22,7 +22,9 @@ NOTE: we are working on making the setup simpler.
     - Run `$ openssl x509 -in server.crt -noout -serial | sed -n 's/serial=//p' | sed 's/://g'` 
  4. Update the private server `Serial` in the Tunnels UI
  5. Update the `ID` in the `server.json` with the `ID` from your private server in the Tunnels UI
- 6. Setup `sysctl.conf` ( example below )
+ 6. Setup `sysctl.conf` and `iptables` ( example below )
+    - Run: $ iptables -I OUTPUT -p tcp --src {interface_IP} --tcp-flags ACK,RST RST -j DROP
+    - Copy the `sysctl.conf` example below to `/etc/sysct.conf`
     - you CAN skip this step, but it's not recommended.
  7. Run the server 
  8. Download the `server.crt` to your computer
