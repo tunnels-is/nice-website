@@ -9,22 +9,28 @@ THIS GUIDE IS NOT COMPLETE.. we are working on it <3
  - iptables installed
 
 ## High level setup process
- 1. Create the Private server in the Tunnels UI
-    - Remember to register the serial number later
- 2. Run `$ ./tunnels-server config`
-    - Creates server.json 
-    - Creates server.crt / server.key
+NOTE: we are working on making the setup simpler.
+
+ 1. Run `$ ./tunnels-server config`
+    - Creates `server.json`
+    - Creates `server.crt` / `server.key`
+    - Add the `controller.crt` to the same directory as your binary
     - NOTE: These might not always be perfect, please review them after they have been generated
+ 2. Create your server in the Tunnels UI
+    - We will update the `server.json` with your new server ID
  3. Extract serial number from certificate
-    - Run `openssl x509 -in server.crt -noout -serial | sed -n 's/serial=//p' | sed 's/://g'` 
-    - Update your server in the Tunnels UI
- 4. Setup sysctl.conf
- 5. Configure your router to forward a port to the server
- 6. Run the server 
- 7. Download the certificate to your laptop
- 8. Create a local tunnel to the server
-    - remember to insert the certificate
- 7. Connect to the server
+    - Run `$ openssl x509 -in server.crt -noout -serial | sed -n 's/serial=//p' | sed 's/://g'` 
+ 4. Update the private server `Serial` in the Tunnels UI
+ 5. Update the `ID` in the `server.json` with the `ID` from your private server in the Tunnels UI
+ 6. Setup `sysctl.conf` ( example below )
+    - you CAN skip this step, but it's not recommended.
+ 7. Run the server 
+ 8. Download the `server.crt` to your computer
+ 9. Create a `Tunnel` using the Tunnels UI
+    - Set `Private` to `true`
+    - Set the `PrivateIP` and `PrivatePort` to your servers ControlIP and ControlPort as seen in the `server.json`
+    - Set `PrivateCert` to the location of the `server.crt` you downloaded from the server
+ 10. Connect to your new tunnel
 
 
 ## Step 1: Sysctl.conf
@@ -46,7 +52,7 @@ net.ipv6.conf.default.disable_ipv6=1
 net.ipv6.conf.all.disable_ipv6=1
 ```
 
-## Step 2: Setup Your Config
+## Example `server.json` config
 ```json
 {
 	"ID": "66c07bba1f4c7f0424496666",
