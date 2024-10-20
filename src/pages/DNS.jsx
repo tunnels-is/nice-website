@@ -55,7 +55,7 @@ const DNS = () => {
 			tag1={"a1"}
 		/>
 
-		<TextImageLeft
+		<TextImageRight
 			title={STORE.Content.DNSPage.DNSProtection.Title}
 			content={STORE.Content.DNSPage.DNSProtection.Content}
 			img={STORE.Content.DNSPage.DNSProtection.Img}
