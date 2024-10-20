@@ -870,6 +870,11 @@ body::-webkit-scrollbar {
       margin-top: 40px;
     }
 
+    img {
+      max-width: 700px;
+
+    }
+
     pre {
       code {
         width: fit-content;

@@ -16,7 +16,7 @@
 Create a private server in the tunnels UI.
 <br>
 <br><b>IMPORTANT</b>: You will need to use the server ID later.
-<img src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-new.png" width="400px"/>
+![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-new.png)
 
 ## Step 2
 Download and run the server binary with the `--config` and `--id` flags.
@@ -31,7 +31,7 @@ CERT SERIAL NUMBER:  6BF79FC5F63556DB96707400E03CA0CC
 $ ls
 server.crt  server.json  server.key  tunnels
 ```
-<img src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-update-serial.png" maxWidth="400px"/>
+![update-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-update-serial.png)
 
 ## Step 3
 Validate the `server.json` and start the server
@@ -82,8 +82,7 @@ The tunnel interface will required the following configurations:
  - `EnableDefaultRoute` set to `true` if you want to route all network traffic
 
 NOTE: This information is only stored locally on your computer. Tunnels does not know the location of your VPN servers.
-![new-tunnel](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/new-tunnel.png
-"title height=200 width=200")
+![new-tunnel](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/new-tunnel.png)
 
 ## Step 6
 Assign your `Private Server` to the `Tunnel Interface` and connect!
