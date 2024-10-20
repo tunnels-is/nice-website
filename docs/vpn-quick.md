@@ -20,13 +20,15 @@ Create a private server in the tunnels UI.
 
 # Step 2
 Download and run the server binary with the `--config` and `--id` flags.
-<b>IMPORTANT</b>: Download the `server.crt`, you will need it to connect
+<b>IMPORTANT</b>: Download the `server.crt`, you will need it to connect.
 
 ```bash
 $ wget https://github.com/tunnels-is/tunnels/releases/download/v[VERSION]/server_[VERSION]_Linux_x86_64.tar.gz
 $ tar -xf server_[VERSION]_Linux_x86_64.tar.gz
+
 $ ./tunnels --config --id 6714f2479950f0dfede56c18
 CERT SERIAL NUMBER:  6BF79FC5F63556DB96707400E03CA0CC
+
 $ ls
 server.crt  server.json  server.key  tunnels
 ```
@@ -34,7 +36,12 @@ server.crt  server.json  server.key  tunnels
 ![update-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-update-serial.png)
 
 # Step 3
-Validate the `server.json` and start the server
+Validate the `server.json` and start the server.
+<b>NOTE</b>: Starting the server does not require any command line flags
+
+```bash
+$ ./server
+```
 
 ## server.json
 ```json
@@ -71,7 +78,8 @@ Validate the `server.json` and start the server
 ```
 
 # Step 5
-Create a `tunnel interface` for the server. 
+Navigate to `Tunnels` in the `Tunnels UI` and press `+`
+
 The tunnel interface will required the following configurations:
  - `IPv4Address` set to a unique local IP address
  - `Tag` and `IFName` set to your preffered values
