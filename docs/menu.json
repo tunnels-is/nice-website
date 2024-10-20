@@ -7,58 +7,43 @@
 			"indent": 0
 		},
 		{
-			"tag": "Downloading",
-			"file": "downloading.md",
+			"tag": "Getting Started",
+			"file": "getting-started.md",
 			"indent": 2
 		},
 		{
-			"tag": "Registering",
-			"file": "registering.md",
+			"tag": "Anonymous Accounts",
+			"file": "anonymous-accounts.md",
 			"indent": 2
 		},
 		{
-			"tag": "Connecting",
-			"file": "connecting.md",
+			"tag": "Account Top-Up",
+			"file": "account-top-up.md",
 			"indent": 2
 		},
 		{
-			"tag": "Disconnecting",
-			"file": "disconnecting.md",
-			"indent": 2
-		},
-		{
-			"tag": "Advanced",
-			"file": "advanced.md",
+			"tag": "Configurations",
+			"file": "configurations.md",
 			"indent": 0
 		},
 		{
-			"tag": "Routes",
-			"file": "routes.md",
+			"tag": "IPv6 Leaks",
+			"file": "ipv6-leaks.md",
 			"indent": 2
 		},
 		{
-			"tag": "DNS",
+			"tag": "DNS Server",
 			"file": "dns.md",
-			"indent": 2
-		},
-		{
-			"tag": "",
-			"file": "",
 			"indent": 0
 		},
 		{
-			"tag": "Private Servers",
-			"file": "ps.md",
-			"indent": 1
-		},
-		{
-			"tag": "Setup",
-			"file": "ps-setup.md",
+			"tag": "Getting Started",
+			"file": "dns-getting-started.md",
 			"indent": 2
 		},
 		{
-			"tag": "??",
-			"file": "ps-random.md",
+			"tag": "Custom Blocklist",
+			"file": "custom-blocklist.md",
 			"indent": 2
 		}
 	]

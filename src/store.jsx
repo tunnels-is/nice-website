@@ -35,11 +35,11 @@ var STORE = {
 
 			TriForce: {
 				Content1: "Small Disk Size",
-				Img1: "https://raw.githubusercontent.com/tunnels-is/media/master/web/size-on-disk.png",
+				Img1: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/size-on-disk.png",
 				Content2: "Small Memory Footprint",
-				Img2: "https://raw.githubusercontent.com/tunnels-is/media/master/web/size-in-memory.png",
+				Img2: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/memory-use.png",
 				Content3: "No Install Required",
-				Img3: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/temp/clean-settings.png",
+				Img3: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/logo/reddit-logo.png",
 			},
 
 			ReverseTriForce: {
@@ -337,21 +337,21 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 		subs: [
 			{
 				Title: "1 Month",
-				Price: 7,
+				Price: 9,
 				URL: "https://nicelandvpn.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3",
 				Button: "One Month",
 				Included: ["Network Access", "Money Back Guarantee", "Support"],
 			},
 			{
 				Title: "12 Months",
-				Price: 5,
+				Price: 6,
 				URL: "https://nicelandvpn.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a",
 				Button: "One Year",
 				Included: ["- Network Access", "- Money Back Guarantee", "- Support"],
 			},
 			{
 				Title: "6 Months",
-				Price: 6,
+				Price: 8,
 				URL: "https://nicelandvpn.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361",
 				Button: "Six Months",
 				Included: ["- Network Access", "- Money Back Guarantee", "- Support"],
