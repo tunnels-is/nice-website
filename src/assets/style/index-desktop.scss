@@ -878,10 +878,13 @@ body::-webkit-scrollbar {
     pre {
       code {
         width: fit-content;
+        min-width: 500px;
         text-overflow: ellipsis;
-        overflow-y: auto;
+        overflow-y: hidden;
         text-wrap: pretty;
         font-weight: 500;
+        padding-top: 10px;
+        padding-bottom: 10px;
       }
     }
 
