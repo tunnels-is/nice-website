@@ -876,7 +876,15 @@ body::-webkit-scrollbar {
         text-overflow: ellipsis;
         overflow-y: auto;
         text-wrap: pretty;
+        font-weight: 500;
       }
+    }
+
+    code {
+      font-weight: 600;
+      color: var(--c-shade6);
+      background: var(--c-shade2);
+      padding: 0 5px 0 5px;
     }
 
     .button-wrapper {

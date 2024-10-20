@@ -25,7 +25,7 @@ Download and run the server binary with the `--config` and `--id` flags.
 
 ```bash
 $ wget https://github.com/tunnels-is/tunnels/releases/download/v[VERSION]/server_[VERSION]_Linux_x86_64.tar.gz
-$ tar -xf tar -xf server_[VERSION]_Linux_x86_64.tar.gz
+$ tar -xf server_[VERSION]_Linux_x86_64.tar.gz
 $ ./tunnels --config --id 6714f2479950f0dfede56c18
 CERT SERIAL NUMBER:  6BF79FC5F63556DB96707400E03CA0CC
 $ ls
@@ -35,7 +35,7 @@ server.crt  server.json  server.key  tunnels
 
 
 ## Step 3
-Validate the ```bash server.json``` and start the server
+Validate the `server.json` and start the server
 
 ## server.json
 ```json
