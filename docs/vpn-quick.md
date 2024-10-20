@@ -47,11 +47,11 @@ $ ./server
 ```json
 {
   "ID": "6714f2479950f0dfede56c18",
-  "ControlIP": "93.95.231.66", ## Default gateway IP
-  "ControlPort": "444", ## Port used to Connect
-  "UserMaxConnections": 4, ## Maximum number of client connection
-  "InterfaceIP": "93.95.231.66", ## IP used for actual VPN traffic
-  "DataPort": "443", ## Port used to VPN traffic
+  "ControlIP": "93.95.231.66", // Default gateway IP
+  "ControlPort": "444", // Port used to Connect
+  "UserMaxConnections": 4, // Maximum number of client connection
+  "InterfaceIP": "93.95.231.66", // IP used for actual VPN traffic
+  "DataPort": "443", // Port used to VPN traffic
   "StartPort": 2000,
   "EndPort": 65500,
   "AvailableMbps": 1000,
@@ -64,7 +64,7 @@ $ ./server
     {
       "Tag": "",
       "Network": "93.95.231.66/24",
-      "Nat": "10.10.10.1/24", ## Automatic Local Network NAT
+      "Nat": "10.10.10.1/24", // Automatic Local Network NAT
       "Routes": null
     }
   ],
