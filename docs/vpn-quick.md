@@ -95,7 +95,7 @@ The tunnel interface will required the following configurations:
  - `PrivateCert` set as the path to `server.crt` 
  - `EnableDefaultRoute` set to `true` if you want to route all network traffic
 
-NOTE: This information is only stored locally on your computer. Tunnels does not know the location of your VPN servers.
+<b>NOTE</b>: This information is only stored locally on your computer. Tunnels does not know the location of your VPN servers.
 
 ![new-tunnel](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/new-tunnel.png)
 
