@@ -96,8 +96,10 @@ The tunnel interface will required the following configurations:
  - `EnableDefaultRoute` set to `true` if you want to route all network traffic
 
 NOTE: This information is only stored locally on your computer. Tunnels does not know the location of your VPN servers.
+
 ![new-tunnel](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/new-tunnel.png)
 
 # Step 6
 Assign your `Private Server` to the `Tunnel Interface` and connect!
+
 ![tunnel-finished](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/tunnel-finished.png)
