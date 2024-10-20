@@ -16,7 +16,7 @@ var STORE = {
 			Title: "Download Tunnels",
 			Subtitle: "click here for all available releases",
 			AllLink: "https://github.com/tunnels-is/tunnels/releases/latest",
-			MacOS: "https://github.com/tunnels-is/tunnels/releases/download/v" + Version + "/tunnels_" + Version + "_Darwin_arm64.tar.gz",
+			MacOS: "https://github.com/tunnels-is/tunnels/releases/download/v" + Version + "/tunnels_" + Version + "_Darwin_x86_64.tar.gz",
 			Windows: "https://github.com/tunnels-is/tunnels/releases/download/v" + Version + "/tunnels_" + Version + "_Windows_x86_64.zip",
 			Linux: "https://github.com/tunnels-is/tunnels/releases/latest",
 		},
