@@ -8,12 +8,6 @@ import { markedHighlight } from "marked-highlight";
 import { hljs } from '../hljs/highlight.js';
 import STORE from '../store';
 
-marked.use({
-	async: true,
-	pedantic: false,
-	gfm: true,
-	breaks: true,
-});
 
 const marked = new Marked(
 	markedHighlight({
@@ -24,6 +18,13 @@ const marked = new Marked(
 		}
 	})
 );
+
+marked.use({
+	async: false,
+	pedantic: false,
+	gfm: true,
+	breaks: true,
+});
 
 
 const Documentation = () => {

@@ -35,7 +35,7 @@ server.crt  server.json  server.key  tunnels
 
 
 ## Step 3
-Validate the `server.json` and start the server
+Validate the```bash server.json``` and start the server
 
 ## server.json
 ```json
