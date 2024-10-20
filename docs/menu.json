@@ -45,6 +45,36 @@
 			"tag": "Custom Blocklist",
 			"file": "custom-blocklist.md",
 			"indent": 2
+		},
+		{
+			"tag": "VPN Server",
+			"file": "vpn-server.md",
+			"indent": 0
+		},
+		{
+			"tag": "Quick Setup",
+			"file": "vpn-quick.md",
+			"indent": 2
+		},
+		{
+			"tag": "Server Config",
+			"file": "vpn-config.md",
+			"indent": 2
+		},
+		{
+			"tag": "Linux Config",
+			"file": "vpn-linux-config.md",
+			"indent": 2
+		},
+		{
+			"tag": "2x IP Setup",
+			"file": "vpn-hp.md",
+			"indent": 2
+		},
+		{
+			"tag": "Multi IP Per Server",
+			"file": "vpn-multi-ip.md",
+			"indent": 2
 		}
 	]
 }
