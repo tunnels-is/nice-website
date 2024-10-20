@@ -14,15 +14,14 @@
 
 ## Step 1 
 Create a private server in the tunnels UI.
-<br>
-<br><b>IMPORTANT</b>: You will need to use the server ID later.
+
+<b>IMPORTANT</b>: You will need to use the server ID later.
 ![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-new.png)
 
 ## Step 2
 Download and run the server binary with the `--config` and `--id` flags.
-<br>
-<br><b>IMPORTANT</b>: Download the `server.crt`, you will need it to connect
 
+<b>IMPORTANT</b>: Download the `server.crt`, you will need it to connect
 ```bash
 $ wget https://github.com/tunnels-is/tunnels/releases/download/v[VERSION]/server_[VERSION]_Linux_x86_64.tar.gz
 $ tar -xf server_[VERSION]_Linux_x86_64.tar.gz
