@@ -34,11 +34,11 @@ var STORE = {
 			},
 
 			TriForce: {
-				Content1: "Small Disk Size",
+				Content1: "Small Size",
 				Img1: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/size-on-disk.png",
-				Content2: "Small Memory Footprint",
+				Content2: "Small Footprint",
 				Img2: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/memory-use.png",
-				Content3: "No Install Required",
+				Content3: "No installation",
 				Img3: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/logo/reddit-logo.png",
 			},
 
