@@ -12,13 +12,13 @@
     $ apt install iptables
     ```
 
-## Step 1 
+# Step 1 
 Create a private server in the tunnels UI.
 <b>IMPORTANT</b>: You will need to use the server ID later.
 
 ![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-new.png)
 
-## Step 2
+# Step 2
 Download and run the server binary with the `--config` and `--id` flags.
 <b>IMPORTANT</b>: Download the `server.crt`, you will need it to connect
 
@@ -33,7 +33,7 @@ server.crt  server.json  server.key  tunnels
 
 ![update-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-update-serial.png)
 
-## Step 3
+# Step 3
 Validate the `server.json` and start the server
 
 ## server.json
@@ -70,7 +70,7 @@ Validate the `server.json` and start the server
 }
 ```
 
-## Step 5
+# Step 5
 Create a `tunnel interface` for the server. 
 The tunnel interface will required the following configurations:
  - `IPv4Address` set to a unique local IP address
@@ -84,6 +84,6 @@ The tunnel interface will required the following configurations:
 NOTE: This information is only stored locally on your computer. Tunnels does not know the location of your VPN servers.
 ![new-tunnel](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/new-tunnel.png)
 
-## Step 6
+# Step 6
 Assign your `Private Server` to the `Tunnel Interface` and connect!
 ![tunnel-finished](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/tunnel-finished.png)
