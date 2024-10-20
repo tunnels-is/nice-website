@@ -94,6 +94,7 @@ The tunnel interface will required the following configurations:
 ![new-tunnel](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/new-tunnel.png)
 
 # Step 6
-Assign your `Private Server` to the `Tunnel Interface` and connect!
+Navigate to `Private` in the `Tunnels UI`, find your new private server and select `assign`.
+This will give you a list of available `Tunnels`, select the one we just created.
 
 ![tunnel-finished](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/tunnel-finished.png)
