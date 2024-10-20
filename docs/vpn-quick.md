@@ -21,7 +21,7 @@ Create a private server in the tunnels UI.
 ## Step 2
 Download and run the server binary with the `--config` and `--id` flags.
 <br>
-<br><b>IMPORTANT</b>: Download the `server.crt`, you will need to connect
+<br><b>IMPORTANT</b>: Download the `server.crt`, you will need it to connect
 
 ```bash
 $ wget https://github.com/tunnels-is/tunnels/releases/download/v[VERSION]/server_[VERSION]_Linux_x86_64.tar.gz
@@ -31,7 +31,7 @@ CERT SERIAL NUMBER:  6BF79FC5F63556DB96707400E03CA0CC
 $ ls
 server.crt  server.json  server.key  tunnels
 ```
-![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-update-serial.png)
+![update-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-update-serial.png)
 
 
 ## Step 3
@@ -81,9 +81,9 @@ The tunnel interface will required the following configurations:
  - `PrivatePort` set to your `server.json` ControlPort 
  - `PrivateCert` set as the path to `server.crt` 
 
-NOTE: This information is only stored locally on your computer. Tunnels does not know the location of your VPN servers.
+![new-tunnel](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/new-tunnel.png)
 
--- insert screenshot
+NOTE: This information is only stored locally on your computer. Tunnels does not know the location of your VPN servers.
 
 ## Step 6
 Connect to your new tunnel
