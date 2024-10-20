@@ -34,26 +34,6 @@ NOTE: we are working on making the setup simpler.
     - Set `PrivateCert` to the location of the `server.crt` you downloaded from the server
  10. Connect to your new tunnel
 
-
-## Step 1: Sysctl.conf
-```bash
-net.core.rmem_max=65536000
-net.core.wmem_max=65536000
-net.ipv4.tcp_rmem=65536 196608 655360
-net.ipv4.tcp_wmem=65536 196608 655360
-net.ipv4.tcp_mtu_probing=0
-net.core.default_qdisc=fq
-net.core.optmem_max=65536000
-net.ipv4.tcp_timestamps=0
-net.ipv4.tcp_sack=0
-net.ipv4.tcp_congestion_control=cubic
-fs.file-max=500000
-net.ipv4.ip_local_reserved_ports = 2000-65500
-net.ipv4.ip_local_port_range = 1024 1999
-net.ipv6.conf.default.disable_ipv6=1
-net.ipv6.conf.all.disable_ipv6=1
-```
-
 ## Example `server.json` config
 ```json
 {
