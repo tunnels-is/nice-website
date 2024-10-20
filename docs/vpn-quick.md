@@ -14,16 +14,14 @@
 
 ## Step 1 
 Create a private server in the tunnels UI.
+<br>
 <br><b>IMPORTANT</b>: You will need to use the server ID later.
-
--- insert screenshot
+![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-new.png)
 
 ## Step 2
 Download and run the server binary with the `--config` and `--id` flags.
-<br><b>IMPORTANT</b>: Save the `CERT SERIAL NUMBER` printed on the screen
+<br>
 <br><b>IMPORTANT</b>: Download the `server.crt`, you will need to connect
-
-![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-new.png)
 
 ```bash
 $ wget https://github.com/tunnels-is/tunnels/releases/download/v[VERSION]/server_[VERSION]_Linux_x86_64.tar.gz
@@ -33,15 +31,10 @@ CERT SERIAL NUMBER:  6BF79FC5F63556DB96707400E03CA0CC
 $ ls
 server.crt  server.json  server.key  tunnels
 ```
-
 ![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-update-serial.png)
 
+
 ## Step 3
-Update your private server in the tunnels UI with the serial number from `Step 2`
-
--- insert screenshot
-
-## Step 4
 Validate the `server.json` and start the server
 
 -- insert terminal text ??
