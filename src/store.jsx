@@ -112,7 +112,7 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 			},
 			Tunnels: {
 				Title: "Tunnels",
-				Content: "Tunnel configuration live in the users json config and can be modified using the in-line editor tool or any text editor. <br><br>Configs can easily be ported from one user to another with a simple copy/paste, making configuration management easy at scale.",
+				Content: "Tunnel configuration lives in the users json config and can be modified using the in-line editor tool or any text editor. <br><br>Configs can easily be ported from one user to another with a simple copy/paste, making configuration management easy at scale.",
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/tunnels-editor.png"
 			},
 
