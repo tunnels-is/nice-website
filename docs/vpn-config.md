@@ -15,7 +15,7 @@
   "InternetAccess": true, <- Toggles internet access for VPN users
   "LocalNetworkAccess": true, <- Toggles local network access for VPN users
   "DNSAllowCustomOnly": false, <- Prevents non-custom DNS queries from resolving on this network
-  "DNS": [
+  "DNS": [ <- Custom DNS records ( can be over-written in the tunnel config )
     {
       "Domain": "meow.com", <- custom DNS record
       "Wildcard": true, <- Enabling wildcard will resolve any sub-domain to the current config
@@ -24,7 +24,7 @@
       "CNAME": ""
     }
   ],
-  "Networks": [
+  "Networks": [ // Custom Network settings ( can be over-written in the tunnel config )
     {
       "Tag": "default",
       "Network": "93.95.231.66/24", <- The server side network
@@ -37,7 +37,7 @@
       ]
     }
   ],
-  "DNSServers": [ <- DNS servers used when resolving on this VPN network
+  "DNSServers": [ ## DNS servers used when resolving on this VPN network ( can be over-written in the tunnel config )
     "1.1.1.1",
     "8.8.8.8"
   ],
