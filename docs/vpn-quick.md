@@ -14,14 +14,14 @@
 
 ## Step 1 
 Create a private server in the tunnels UI.
-IMPORTANT: You will need to use the server ID later.
+<br><b>IMPORTANT</b>: You will need to use the server ID later.
 
 -- insert screenshot
 
 ## Step 2
 Download and run the server binary with the `--config` and `--id` flags.
-IMPORTANT: Save the `CERT SERIAL NUMBER` printed on the screen
-IMPORTANT: Download the `server.crt`, you will need to connect
+<br><b>IMPORTANT</b>: Save the `CERT SERIAL NUMBER` printed on the screen
+<br><b>IMPORTANT</b>: Download the `server.crt`, you will need to connect
 
 ![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-new.png)
 
