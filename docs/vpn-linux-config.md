@@ -1,6 +1,12 @@
 # Useful Linux Configurations
+These are recommended configurations and good to have tool when running your own VPN server
 
-## Sysctl configurations
+# Good to have tool for debuggin
+```bash
+$ apt install net-tools tcpdump vim htop iftop
+```
+
+# Sysctl configurations
 
 ### /etc/sysctl.conf
 ```bash
@@ -21,7 +27,7 @@ net.ipv6.conf.default.disable_ipv6=1
 net.ipv6.conf.all.disable_ipv6=1
 ```
 
-## Supervisor
+# Supervisor
 Supervisor helps run binaries in the background and helps with log rotation.
 ```bash
 $ apt install supervisor
