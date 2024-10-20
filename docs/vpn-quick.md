@@ -13,8 +13,8 @@
     ```
 
 # Step 1 
-Create a private server in the tunnels UI.
-<b>IMPORTANT</b>: You will need to use the server ID later.
+Navigate to `Private` in the `Tunnels UI` and press `create`.
+<b>IMPORTANT</b>: You will need to use the `server ID` later.
 
 ![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-new.png)
 
@@ -23,6 +23,7 @@ Download and run the server binary with the `--config` and `--id` flags.
 <b>IMPORTANT</b>: Download the `server.crt`, you will need it to connect.
 
 ```bash
+
 $ wget https://github.com/tunnels-is/tunnels/releases/download/v[VERSION]/server_[VERSION]_Linux_x86_64.tar.gz
 $ tar -xf server_[VERSION]_Linux_x86_64.tar.gz
 
@@ -31,6 +32,7 @@ CERT SERIAL NUMBER:  6BF79FC5F63556DB96707400E03CA0CC
 
 $ ls
 server.crt  server.json  server.key  tunnels
+
 ```
 
 ![update-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-update-serial.png)
@@ -40,11 +42,14 @@ Validate the `server.json` and start the server.
 <b>NOTE</b>: Starting the server does not require any command line flags
 
 ```bash
+
 $ ./server
+
 ```
 
 ## server.json
 ```json
+
 {
   "ID": "6714f2479950f0dfede56c18",
   "ControlIP": "93.95.231.66", <- Default gateway IP
@@ -75,6 +80,7 @@ $ ./server
   "ControlCert": "./server.crt",
   "ControlKey": "./server.key"
 }
+
 ```
 
 # Step 5
