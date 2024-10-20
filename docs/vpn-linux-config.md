@@ -1,6 +1,8 @@
 # Useful Linux Configurations
 
-## /etc/sysctl.conf
+## Sysctl configurations
+
+### /etc/sysctl.conf
 ```bash
 net.core.optmem_max=524288
 net.core.rmem_max=524288
@@ -25,7 +27,7 @@ Supervisor helps run binaries in the background and helps with log rotation.
 $ apt install supervisor
 ```
 
-## /etc/supervisor/conf.d/tunnels.conf
+### /etc/supervisor/conf.d/tunnels.conf
 ```bash
 [program:tunnels]
 command=/opt/tunnels/tunnels
