@@ -22,6 +22,21 @@
 			"indent": 2
 		},
 		{
+			"tag": "Application Settings",
+			"file": "application-settings.md",
+			"indent": 0
+		},
+		{
+			"tag": "General Settings",
+			"file": "general-settings.md",
+			"indent": 2
+		},
+		{
+			"tag": "Advanced Settings",
+			"file": "advanced-settings.md",
+			"indent": 2
+		},
+		{
 			"tag": "Configurations",
 			"file": "configurations.md",
 			"indent": 0
@@ -39,6 +54,11 @@
 		{
 			"tag": "Getting Started",
 			"file": "dns-getting-started.md",
+			"indent": 2
+		},
+		{
+			"tag": "DNS Block Lists",
+			"file": "dns-blocklists.md",
 			"indent": 2
 		},
 		{
