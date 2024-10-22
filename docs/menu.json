@@ -52,8 +52,8 @@
 			"indent": 0
 		},
 		{
-			"tag": "Getting Started",
-			"file": "dns-getting-started.md",
+			"tag": "Configuring the DNS",
+			"file": "dns-configuration.md",
 			"indent": 2
 		},
 		{
