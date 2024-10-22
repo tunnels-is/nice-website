@@ -21,3 +21,5 @@ This serves as your username/email when you log in to the app; without it, you w
 The last two inputs are for setting your password and confirming it.
 
 When finished, click the register button below.
+
+[See here how to purchase an anonymous portable license key.](https://tunnels.is/#/docs/anonymous-portable-license-keys.md)

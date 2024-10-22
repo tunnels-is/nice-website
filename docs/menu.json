@@ -17,6 +17,11 @@
 			"indent": 2
 		},
 		{
+			"tag": "Anonymous Keys",
+			"file": "anonymous-portable-license-keys.md",
+			"indent": 2
+		},
+		{
 			"tag": "Account Top-Up",
 			"file": "account-top-up.md",
 			"indent": 2
@@ -35,6 +40,11 @@
 			"tag": "Advanced Settings",
 			"file": "advanced-settings.md",
 			"indent": 2
+		},
+		{
+			"tag": "Password Recovery",
+			"file": "password-recovery.md",
+			"indent": 0
 		},
 		{
 			"tag": "Configurations",
