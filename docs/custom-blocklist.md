@@ -12,8 +12,9 @@ You need to provide a unique Tag (name) and the absolute path to your block list
 Your block list must be a text file that has one domain per line.
 
 Example:
-```
+```txt
 example.org
 yourdomains.here
 thisisanexample.com
+anotherdomain.is
 ``` 
