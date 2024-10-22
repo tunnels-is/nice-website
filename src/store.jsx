@@ -359,7 +359,7 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 		],
 
 	},
-	MenuURL: "https://raw.githubusercontent.com/tunnels-is/nice-website/main/docs/menu.json",
+	MenuURL: "https://raw.githubusercontent.com/n00bady/nice-website/main/docs/menu.json",
 	GetAndSaveDomain: function() {
 		let host = window.location.host
 		let domain = "default"
