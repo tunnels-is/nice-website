@@ -67,6 +67,11 @@
 			"indent": 2
 		},
 		{
+			"tag": "DNS Analytics",
+			"file": "dns-stats.md",
+			"indent": 2
+		},
+		{
 			"tag": "VPN Server",
 			"file": "vpn-server.md",
 			"indent": 0
