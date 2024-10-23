@@ -2,12 +2,14 @@
 
 ## Getting into the Profile Settings
 
-After you login in the **tunnels** app, click **Profile** in the sidebar. Here are
+After you login in the **tunnels** app, click **Profile**(1) in the sidebar. Here are
 all your account settings and options.
+
+![click profile](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/2fa/sidebar-0.png)
 
 ## Starting the Two-Factor Authentication procedure
 
-Click the `Two-Factor Authentication` button.
+Click the `Two-Factor Authentication` button(1).
 
 ![click this button](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/2fa/2-fa-0.png)
 
