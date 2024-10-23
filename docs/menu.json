@@ -12,6 +12,11 @@
 			"indent": 2
 		},
 		{
+			"tag": "Enabling 2FA",
+			"file": "enabling-2-fa.md",
+			"indent": 2
+		},
+		{
 			"tag": "Anonymous Accounts",
 			"file": "anonymous-accounts.md",
 			"indent": 2

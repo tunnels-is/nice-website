@@ -7,7 +7,8 @@ Clikcing on **DNS** in the sidebar takes you to the DNS settings.
 On the Settings card you can change:  
 - `IP` 
 - `Port`
-- `Primary DNS` and `Backup DNS` 
+- `Primary DNS` 
+- `Backup DNS`
 
 You can also enable or disable the following settings by clicking on the toggle button:
 - `Secure DNS` this enables/disables the DoH
