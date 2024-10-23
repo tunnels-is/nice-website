@@ -6,16 +6,25 @@ Launch the **tunnels** app.
 
 On the login screen click on the **Reset Password** near the bottom of the page.
 
+![click on reset password](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/password-reset/passwd-recovery-0.png)
+
 ## Enter your email and a new password
 
-On the first field enter your email and on the second and third a new password.
+1. Enter your email on the first field
+2. Enter your password on the second an re-enter it on the third to confirm it
+
+![enter your email and a new password](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/password-reset/passwd-recovery-1.png)
 
 ## Get the Reset Code
 
-Click the **Click To Get Reset Code** button, you will receive a recovery code 
-in your email. You will have to put that code in the 4th field.
+1. Click the **Click To Get Reset Code** button, and you will receive a recovery code in your email
+2. Enter the recovery code your just received in the fourth field
+
+![Click on the red button to get the code](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/password-reset/passwd-recovery-2.png)
 
 ## Complete the recovery
 
 Finaly click the **Reset Password** button to complete the reset. After that you can login
 with your new password.
+
+![finish](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/password-reset/passwd-recovery-3.png)

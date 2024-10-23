@@ -23,8 +23,9 @@ Launch the **tunnels** app, and on the login screen, click **Register** near the
 
 ![click register to create new account](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-accounts/register-new-account-0.png)
 
-
-Enter your email(1) and a password(2) and click the register button(3).
+1. Enter your email
+2. Enter your password
+3. Click the `Register` button
 
 ![creating a new account](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-accounts/register-new-account-1.png)
 
@@ -34,7 +35,9 @@ Enter your email(1) and a password(2) and click the register button(3).
 
 You can buy a license key from [here](https://tunnels.is/#/Pricing).
 
-To activate it, login to the app and go to **Profile**(1) in the sidebar, enter your key in the 
-License Key field(2) and click the `Activate Key` button(3) below it.
+To activate it login to the app and: 
+1. Go to **Profile** in the sidebar 
+2. Enter your key in the License Key field 
+3. Click the `Activate Key` button below it.
 
 ![activate your license here](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-accounts/activating-license-key-0.png)
