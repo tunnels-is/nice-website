@@ -24,7 +24,7 @@ Enter your email(1) and a password(2) and click the register button(3).
 
 You can buy a license key from [here](https://tunnels.is/#/Pricing).
 
-To activate it, login to the app and go to **Profile** in the sidebar, enter your key in the 
-License Key input field and click the Activate key button below it.
+To activate it, login to the app and go to **Profile**(1) in the sidebar, enter your key in the 
+License Key field(2) and click the `Activate Key` button(3) below it.
 
 ![activate your license here](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-accounts/activating-license-key-0.png)
