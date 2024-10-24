@@ -3,7 +3,7 @@
 
 ## Anonymous Registration
 
-Launch the **tunnels** app.  
+Launch the **Tunnels** app.  
 On the login screen, click on **Register Anonymously** near the bottom.
 
 ![Register Anonymously](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/anon-accounts/register-anon-0.png)

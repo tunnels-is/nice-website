@@ -1,6 +1,6 @@
 # Password Recovery
 
-Launch the **tunnels** app.
+Launch the **Tunnels** app.
 
 ## Reseting your Password
 

@@ -2,24 +2,24 @@
 
 ---
 
-## Downloading and Installing the **tunnels** app
+## Downloading and Installing the **Tunnels** app
 
 ---
 
-You can download the latest release of the **tunnels** app from [here](https://github.com/tunnels-is/tunnels/releases).
+You can download the latest release of the **Tunnels** app from [here](https://github.com/tunnels-is/tunnels/releases).
 
-## Installing the **tunnels** app
+## Installing the **Tunnels** app
 
 ---
 
-On Windows and Linux, you can simply run the **tunnels** executable.
+On Windows and Linux, you can simply run the **Tunnels** executable.
 On MacOS, you will need to drag it to the applications folder first.
 
 ## Creating a new account
 
 ---
 
-Launch the **tunnels** app, and on the login screen, click **Register** near the bottom.
+Launch the **Tunnels** app, and on the login screen, click **Register** near the bottom.
 
 ![click register to create new account](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-accounts/register-new-account-0.png)
 

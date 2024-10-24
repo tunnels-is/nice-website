@@ -2,7 +2,7 @@
 
 ## <u>Getting into the Profile Settings</u>
 
-After you login in the **tunnels** app, click **Profile** in the sidebar. Here are
+After you login in the **Tunnels** app, click **Profile** in the sidebar. Here are
 all your account settings and options.
 
 ![click profile](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/2fa/sidebar-0.png)
