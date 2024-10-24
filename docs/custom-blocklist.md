@@ -1,20 +1,32 @@
 # Custom Block Lists
 
-Click on **DNS** in the sidebar under the Settings you can find the Block Lists.  
-By clicking the Add button on the top right of the table you can `Add` your own.
+1. Click on **DNS** in the sidebar under the Settings  
+2. Click the `Add` button on the top right of the block lists table to add your own block list
+
+![add your own block lists here](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/dns-custom-blocklists/dns-custom-blocklists-0.png)
+
+---
 
 ## Adding a new block list
 
-You need to provide a unique Tag (name) and the absolute path to your block list file.
+1. Enter a unique name for your block list
+2. And enter the absolute path to your block list file
+
+![name and absolute path to your blocklist](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/dns-custom-blocklists/dns-custom-blocklists-1.png)
+
+---
 
 ## Block List format
 
 Your block list must be a text file that has one domain per line.
 
 Example:
+
 ```txt
 example.org
 yourdomains.here
 thisisanexample.com
 anotherdomain.is
 ``` 
+
+---
