@@ -27,6 +27,11 @@
 			"indent": 2
 		},
 		{
+			"tag": "Managing Devices",
+			"file": "managing-logged-in-devices.md",
+			"indent": 2
+		},
+		{
 			"tag": "Account Top-Up",
 			"file": "account-top-up.md",
 			"indent": 2
