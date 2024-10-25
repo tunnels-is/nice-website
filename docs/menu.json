@@ -52,6 +52,21 @@
 			"indent": 2
 		},
 		{
+			"tag": "Connections",
+			"file": "connections.md",
+			"indent": 0
+		},
+		{
+			"tag": "Connecting to a Server",
+			"file": "connecting-server.md",
+			"indent": 2
+		},
+		{
+			"tag": "Configuring Connections",
+			"file": "connections-configuring.md",
+			"indent": 2
+		},
+		{
 			"tag": "Password Recovery",
 			"file": "password-recovery.md",
 			"indent": 0

@@ -1,6 +1,8 @@
-# Getting started
+# DNS Configuration
 
-## Configuring **tunnels** app DNS
+---
+
+## Configuring **Tunnels** app DNS
 
 Clikcing on **DNS** in the sidebar takes you to the DNS settings.  
 
@@ -17,8 +19,16 @@ on the  Blocked and Resolved Domains tables.
 - `Log Blocked` enables/disables the logging of domains that where blocked
 - `Log All` enables/disables all DNS related logging.
 
+![DNS Settings](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/dns/dns-configuration-0.png)
+
 Click the **SAVE** button that appears on the top to save your changes.
+
+---
 
 ## Change your device's DNS settings
 
 For the tunnels DNS to work you need to change your device's DNS settings to `127.0.0.1`.
+
+![Don't forget to save](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/dns/dns-configuration-1.png)
+
+---
