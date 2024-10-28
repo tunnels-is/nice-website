@@ -2,13 +2,13 @@
 
 ---
 
-To enable/disable DNS Analytics you have to:
-1. Go to the `DNS` settings
-2. Click the `DNS Stats` toggle button
+To enable/disable DNS analytics, you have to:
+1. Go to the `DNS` settings.
+2. Click the `DNS Stats` toggle button.
 
 ![DNS Settings](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/dns/dns-stats-1.png)
 
-The DNS Analytics are at the bottom of the page under the Block Lists table.
+The DNS Analytics are at the bottom of the page, under the Block Lists table.
 
 ![DNS Stats](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/dns/dns-analytics-0.png)
 
