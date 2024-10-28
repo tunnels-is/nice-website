@@ -32,6 +32,11 @@
 			"indent": 2
 		},
 		{
+			"tag": "Password Recovery",
+			"file": "password-recovery.md",
+			"indent": 2
+		},
+		{
 			"tag": "Account Top-Up",
 			"file": "account-top-up.md",
 			"indent": 2
@@ -65,11 +70,6 @@
 			"tag": "Configuring Connections",
 			"file": "connections-configuring.md",
 			"indent": 2
-		},
-		{
-			"tag": "Password Recovery",
-			"file": "password-recovery.md",
-			"indent": 0
 		},
 		{
 			"tag": "Configurations",
