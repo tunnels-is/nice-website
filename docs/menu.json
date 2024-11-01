@@ -12,13 +12,63 @@
 			"indent": 2
 		},
 		{
+			"tag": "Enabling 2FA",
+			"file": "enabling-2-fa.md",
+			"indent": 2
+		},
+		{
 			"tag": "Anonymous Accounts",
 			"file": "anonymous-accounts.md",
 			"indent": 2
 		},
 		{
+			"tag": "Anonymous Keys",
+			"file": "anonymous-portable-license-keys.md",
+			"indent": 2
+		},
+		{
+			"tag": "Managing Devices",
+			"file": "managing-logged-in-devices.md",
+			"indent": 2
+		},
+		{
+			"tag": "Password Recovery",
+			"file": "password-recovery.md",
+			"indent": 2
+		},
+		{
 			"tag": "Account Top-Up",
 			"file": "account-top-up.md",
+			"indent": 2
+		},
+		{
+			"tag": "Application Settings",
+			"file": "application-settings.md",
+			"indent": 0
+		},
+		{
+			"tag": "General Settings",
+			"file": "general-settings.md",
+			"indent": 2
+		},
+		{
+			"tag": "Advanced Settings",
+			"file": "advanced-settings.md",
+			"indent": 2
+		},
+		{
+			"tag": "Connections",
+			"file": "connections.md",
+			"indent": 0
+		},
+		{
+			"tag": "Connecting to a Server",
+			"file": "connecting-server.md",
+			"indent": 2
+		},
+		{
+			"tag": "Configuring Connections",
+			"file": "connections-configuring.md",
 			"indent": 2
 		},
 		{
@@ -37,13 +87,23 @@
 			"indent": 0
 		},
 		{
-			"tag": "Getting Started",
-			"file": "dns-getting-started.md",
+			"tag": "Configuring the DNS",
+			"file": "dns-configuration.md",
+			"indent": 2
+		},
+		{
+			"tag": "DNS Block Lists",
+			"file": "dns-blocklists.md",
 			"indent": 2
 		},
 		{
 			"tag": "Custom Blocklist",
 			"file": "custom-blocklist.md",
+			"indent": 2
+		},
+		{
+			"tag": "DNS Analytics",
+			"file": "dns-stats.md",
 			"indent": 2
 		},
 		{
