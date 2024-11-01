@@ -21,7 +21,8 @@ var STORE = {
 			Linux: "https://github.com/tunnels-is/tunnels/releases/latest",
 		},
 		Pricing: {
-			Title: "Get your license key here!"
+			Title: "",
+			Link: "Anonymous top-ups"
 		},
 
 		Home: {
@@ -34,11 +35,11 @@ var STORE = {
 			},
 
 			TriForce: {
-				Content1: "Small Size",
+				Content1: "",
 				Img1: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/size-on-disk.png",
-				Content2: "Small Footprint",
+				Content2: "",
 				Img2: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/memory-use.png",
-				Content3: "No installation",
+				Content3: "",
 				Img3: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/logo/reddit-logo.png",
 			},
 
@@ -75,6 +76,19 @@ var STORE = {
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/dark-mode.png",
 			},
 		},
+		FreePage: {
+			DNS: {
+				Title: "DNS Blocking",
+				Content: "Tunnels offers a free DNS Blocking service. No Account required, just download and run.",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/dns-block.png",
+			},
+			PrivateServers: {
+				Title: "Private Servers",
+				Content: "Our users can make as many private servers as they want for free. No subscription needed.",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/private-servers.png"
+			},
+
+		},
 		DNSPage: {
 			SmallBanner: {
 				Title: "DNS Security",
@@ -89,7 +103,7 @@ var STORE = {
 		FeaturePage: {
 			SmallBanner: {
 				Title: "How Does It Work ?",
-				Subtitle: "It's just tunnels and servers",
+				Subtitle: "it's just tunnels and servers",
 			},
 
 			TunnelsToServersDiagram: {
@@ -150,11 +164,11 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 		},
 		Enterprise: {
 			SmallBanner: {
-				Title: "Bigger Scale",
-				Subtitle: "Tunnels was designed to be lightweight and scale big",
+				Title: "Tunnels For Large Networks",
+				Subtitle: "lightweight design for big scale",
 			},
 			TextImageRight1: {
-				Title: "???",
+				Title: "Felxability & Scalability",
 				Content: "Automatically connect your employees to all of their networks, all at once. Tunnels is designed to be install-free, simply copy/paste and run. This makes managing a large number of users, simple and pain free.<br/><br/> Company wide configurations can be distributed as simple files to users in multitudes of ways or automatically updated by system administrators.",
 				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/web/allthethings.png"
 			},
@@ -168,6 +182,16 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 
 		Features: {
 			Basic: {
+				NoLogging: {
+					Title: "No Logging",
+					Content: "User actions are not logged in our public vpn network",
+					Icon: LayersIcon,
+				},
+				NoTracking: {
+					Title: "No Tracking",
+					Content: "User actions are not tracked in any way in our public network",
+					Icon: LayersIcon,
+				},
 				NoPersistance: {
 					Title: "No Persistence",
 					Content: "Tunnels does not leave any services or hidden files on your system",
@@ -189,12 +213,12 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 					Icon: LayersIcon,
 				},
 				DNSCustom: {
-					Title: "Custom DNS Records",
+					Title: "Custom DNS",
 					Content: "Register custom A, TXT and CNAME records for any domain",
 					Icon: LayersIcon,
 				},
 				DNSTransformation: {
-					Title: "Transform DNS to DoH",
+					Title: "DNS to DoH",
 					Content: "Our in-build DNS server can translate your normal DNS to DNS over HTTPS",
 					Icon: LayersIcon,
 				},
@@ -209,12 +233,12 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 					Icon: LayersIcon,
 				},
 				DNSLeakPrevention: {
-					Title: "DNS Leak Protection",
+					Title: "DNS Leak Prevention",
 					Content: "Use our built-in DNS proxy to completely prevent DNS leaks, even without a Tunnels account",
 					Icon: LayersIcon,
 				},
 				IPV6Blocking: {
-					Title: "IPv6 Leak Prevention",
+					Title: "IPv6 Blocking",
 					Content: "Tunnels can be configured to deny connections if IPv6 is enabled",
 					Icon: LayersIcon,
 				},
@@ -234,8 +258,8 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 					Icon: LayersIcon,
 				},
 				Torrenting: {
-					Title: "Torrent Friendly Servers",
-					Content: "Tunnels offers special servers which are torrent friendly",
+					Title: "Special Servers",
+					Content: "We are in the process of setting up server designed for P2P sharing without restrictions",
 					Icon: LayersIcon,
 				},
 
@@ -256,9 +280,14 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 					Content: "Tunnels is built from the ground up using Golang, a multi-threaded modern programming language",
 					Icon: LayersIcon,
 				},
-				PerUserEncryptedStreams: {
-					Title: "Isolated Streams",
-					Content: "Every end-to-end connection uses tried and true encryption method and unique encryption keys",
+				AbstractNAT: {
+					Title: "Abstract NAT",
+					Content: "Client and server side NAT abstractions",
+					Icon: LayersIcon,
+				},
+				RouteBased: {
+					Title: "Custom Routing",
+					Content: "Client and server side custom routing",
 					Icon: LayersIcon,
 				},
 			},
@@ -325,36 +354,34 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 			"Content-Type": "application/json",
 			"Accept": "*/*",
 		},
-		otherPayments: [
-			{
-				Title: "Anonymous License Key",
-				Price: 9,
-				URL: "https://nicelandvpn.lemonsqueezy.com/buy/e8cbc47c-c19b-4ef7-9f8a-c8e2b94597dd",
-				Button: "Register Now",
-				Included: ["something", "something", "something"],
-			}
-		],
+		AnonKey: {
+			Title: "Anonymous License Key",
+			Price: 9,
+			URL: "https://tunnels.lemonsqueezy.com/buy/e8cbc47c-c19b-4ef7-9f8a-c8e2b94597dd",
+			Button: "Register Now",
+			Included: ["something", "something", "something"],
+		},
 		subs: [
 			{
 				Title: "1 Month",
 				Price: 9,
-				URL: "https://nicelandvpn.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3",
+				URL: "https://tunnels.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3",
 				Button: "One Month",
-				Included: ["Network Access", "Money Back Guarantee", "Support"],
+				Included: ["- Public Network", "- Money Back Guarantee", "- Support"],
 			},
 			{
 				Title: "12 Months",
 				Price: 6,
-				URL: "https://nicelandvpn.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a",
+				URL: "https://tunnels.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a",
 				Button: "One Year",
-				Included: ["- Network Access", "- Money Back Guarantee", "- Support"],
+				Included: ["- Public Network", "- Money Back Guarantee", "- Support"],
 			},
 			{
 				Title: "6 Months",
 				Price: 8,
-				URL: "https://nicelandvpn.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361",
+				URL: "https://tunnels.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361",
 				Button: "Six Months",
-				Included: ["- Network Access", "- Money Back Guarantee", "- Support"],
+				Included: ["- Public Network", "- Money Back Guarantee", "- Support"],
 			},
 		],
 

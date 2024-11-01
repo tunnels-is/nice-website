@@ -4,18 +4,9 @@ import React, { useState } from "react";
 import {
 	AccessibilityIcon,
 	EnterIcon,
-	ExitIcon,
 	ExternalLinkIcon,
-	InfoCircledIcon,
-	QuestionMarkCircledIcon,
 } from '@radix-ui/react-icons'
 
-const IconWidth = 23
-const IconHeight = 23
-
-const goToCalendar = () => {
-	window.open("https://calendar.google.com/calendar/embed?src=support%40nicelandvpn.is", '_blank');
-}
 
 const SideBar = (props) => {
 	const navigate = useNavigate();
@@ -28,6 +19,8 @@ const SideBar = (props) => {
 				route: "home",
 				user: true,
 				items: [
+					{ icon: ExternalLinkIcon, label: "Public VPN", route: "public" },
+					{ icon: ExternalLinkIcon, label: "Free Features", route: "free" },
 					{ icon: ExternalLinkIcon, label: "Features", route: "features" },
 					{ icon: EnterIcon, label: "DNS Security", route: "dns" },
 					{ icon: EnterIcon, label: "Enterprise", route: "enterprise" },
@@ -41,7 +34,7 @@ const SideBar = (props) => {
 				user: false,
 				items: [
 					{ icon: AccessibilityIcon, label: "Documentation", route: "docs", },
-					{ icon: EnterIcon, label: "Timeline", url: "https://calendar.google.com/calendar/embed?src=support%40nicelandvpn.is" },
+					{ icon: EnterIcon, label: "Timeline", url: "https://calendar.google.com/calendar/embed?src=c_b553c96f3d380946b68a4392a458e8b61ef9245b06f62dfd41045cdbfa682728%40group.calendar.google.com&ctz=UTC" },
 				]
 			}
 

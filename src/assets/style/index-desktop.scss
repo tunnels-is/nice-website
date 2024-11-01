@@ -48,6 +48,17 @@
   color: var(--c-shade6);
 }
 
+.front-page-free-stuff {
+  text-align: center;
+  font-size: 50px;
+  width: fit-content;
+  margin: auto;
+}
+
+.free-link {
+  text-decoration: none;
+}
+
 
 .subtitle {
   font-size: 25px;
@@ -109,13 +120,19 @@
 .basic-page {
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 250px;
 }
 
 .home-page {
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 250px;
+}
+
+.small-gap-page {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
 }
 
 
@@ -294,8 +311,8 @@ body::-webkit-scrollbar {
     }
   }
 
-  .version {}
 }
+
 
 .pricing-component {
   display: flex;
@@ -304,7 +321,11 @@ body::-webkit-scrollbar {
   align-items: center;
 
   .title {
-    margin: 0px 0px 100px 0px;
+    margin: 100px 0px 0px 0px;
+  }
+
+  .link {
+    text-decoration: none;
   }
 
   .pricing-wrapper {
@@ -466,7 +487,10 @@ body::-webkit-scrollbar {
 }
 
 .gopher {
+  border-bottom: 1px solid var(--c-shade6);
+
   img {
+    margin-bottom: -2px;
     width: 50% !important;
   }
 }
@@ -598,6 +622,7 @@ body::-webkit-scrollbar {
 
   .item2 {
     left: 440px;
+    margin-top: -60px;
   }
 
   .item3 {
@@ -687,21 +712,21 @@ body::-webkit-scrollbar {
   }
 
   .top {
-    top: 200px;
+    top: 240px;
     left: 10%;
     width: 80%;
   }
 
   .left {
     left: -75px;
-    top: 450px;
+    top: 490px;
     width: 57%;
   }
 
   .right {
 
     right: -60px;
-    top: 360px;
+    top: 400px;
     width: 63%
   }
 
@@ -779,7 +804,7 @@ body::-webkit-scrollbar {
 }
 
 .link:hover {
-  box-shadow: inset 500px 0 0 0 var(--c-blue);
+  box-shadow: inset 1000px 0 0 0 var(--c-blue);
   color: var(--c-white);
 }
 
@@ -964,6 +989,10 @@ body::-webkit-scrollbar {
 
 .footer {
   margin-bottom: 100px;
+
+  .link {
+    text-decoration: none;
+  }
 
   .text {
     font-size: 18px;
