@@ -1,15 +1,12 @@
 # DNS Block Lists
 
-## Getting to the DNS Settings
-You can find all the default block lists by clicking on the **DNS** in the sidebar.  
-
-![Go to the DNS page](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/dns/dns-blocklist-0.png)
-
 ---
 
 ## Enabling Block Lists
 
-You can enable each block list separately by clicking on the `Allowed` button. The 
+Clicking on **DNS** in the sidebar takes you to the DNS settings.  
+
+Here you can enable each block list separately by clicking on the `Allowed` button. The 
 `Allowed` button will turn into `Blocked`. 
 
 ![enable block lists](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/dns/dns-blocklist-1.png)

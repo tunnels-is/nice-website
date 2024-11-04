@@ -28,6 +28,23 @@ Click the `Two-Factor Authentication` button.
 
 ![Enter your code and password and click confirm](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/2fa/2-fa-1.png)
 
-The 3rd field is optional and only need it if you lose access to your authenticator app.
+---
+
+## Recovery Codes
+
+When you setup two-factor authentication for the first time, you will also get some recovery codes; save them somewhere safe, and if you ever lose access to your authentication app, you can use them to recover and log in.
+
+To use them, you need to click on `2FA Recovery` in the login screen.
+
+![2fa recovery](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/2fa/2fa-recovery-0.png)
+
+Now enter:
+1. Your email.
+2. Your password.
+3. One of your recovery codes.
+
+And you can login.
+
+![2fa recovery](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/2fa/2fa-recovery-1.png)
 
 ---
