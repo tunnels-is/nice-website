@@ -1,12 +1,20 @@
 import React, { useEffect } from "react";
-import Triforce from "../components/Triforce"
 import TextImageLeft from "../components/TextImageLeft";
 import TextImageRight from "../components/TextImageRight";
 import Banner from "../components/Banner";
-import ReverseTriforce from "../components/ReverseTriforce";
 import ScrollAnimate from "../components/ScrollAnimate";
 import STORE from "../store";
+import BigFeatures from "../components/BigFeatures";
 
+const f = [
+	{ ...STORE.Content.Features.Basic.DNSCustom, Tag: "big25", BG: true },
+	{ ...STORE.Content.Features.Basic.DNSBlocking, Tag: "big21", BG: false },
+]
+
+const f2 = [
+	{ ...STORE.Content.Features.Advanced.AbstractNAT, Tag: "big31", BG: false },
+	{ ...STORE.Content.Features.Advanced.RouteBased, Tag: "big32", BG: true },
+]
 const Home = () => {
 	const [initialize] = ScrollAnimate()
 
@@ -26,6 +34,15 @@ const Home = () => {
 			"animate11": true,
 		})
 
+		let a = {}
+
+		f?.forEach(f => {
+			a[f.Tag] = true
+		})
+		f2?.forEach(f => {
+			a[f.Tag] = true
+		})
+		initialize(a)
 
 		window.scrollTo(0, 0)
 	}, [])
@@ -41,29 +58,29 @@ const Home = () => {
 			tag1={"animate1"}
 		/>
 
-		<Triforce
-			content1={STORE.Content.Home.TriForce.Content1}
-			img1={STORE.Content.Home.TriForce.Img1}
-			content2={STORE.Content.Home.TriForce.Content2}
-			img2={STORE.Content.Home.TriForce.Img2}
-			content3={STORE.Content.Home.TriForce.Content3}
-			img3={STORE.Content.Home.TriForce.Img3}
-			tag1={"animate2"}
-			tag2={"animate3"}
-			tag3={"animate4"}
-		/>
+		<div>
+			<a className="free-link" href="#/free">
+				<div className="front-page-free-stuff title link">
+					Learn About Our Free Features
+				</div>
+			</a>
+		</div>
 
+		<BigFeatures features={f2} />
 
 		<TextImageLeft
-			link={"/individuals"}
+			link={"/features"}
 			title={STORE.Content.Home.ImageLeft1.Title}
 			content={STORE.Content.Home.ImageLeft1.Content}
 			img={STORE.Content.Home.ImageLeft1.Img}
 			tag1={"animate8"}
 		/>
 
+
+		<BigFeatures features={f} />
+
 		<TextImageRight
-			link={"/developers"}
+			link={"/dns"}
 			title={STORE.Content.Home.ImageRight1.Title}
 			content={STORE.Content.Home.ImageRight1.Content}
 			img={STORE.Content.Home.ImageRight1.Img}
@@ -77,6 +94,7 @@ const Home = () => {
 			img={STORE.Content.Home.ImageLeft2.Img}
 			tag1={"animate10"}
 		/>
+
 
 		<TextImageRight
 			link={"/"}

@@ -13,7 +13,6 @@ const Pricing = () => {
 		<div className={"pricing-component pricing-animate viewport-hide"}>
 
 
-			<div className="title">{STORE.Content.Pricing.Title}</div>
 
 			<div className="pricing-wrapper">
 				{STORE.Config.subs.map((s, i) => {
@@ -42,6 +41,15 @@ const Pricing = () => {
 					)
 				})}
 
+			</div>
+
+			<div className="title">
+				<a className="link"
+					target="_blank"
+					href={STORE.Config.AnonKey.URL}
+				>
+					{STORE.Config.AnonKey.Title}
+				</a>
 			</div>
 		</div>
 	)

@@ -18,6 +18,8 @@ import Documentation from "./pages/Documentation";
 import Features from "./pages/Features";
 import PricingPage from "./pages/Pricing";
 import DNS from "./pages/DNS";
+import PublicPage from "./pages/Public";
+import FreePage from "./pages/Free";
 
 var rootEle = document.getElementById('root')
 const root = createRoot(rootEle);
@@ -37,6 +39,8 @@ const App = () => {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/home" element={<Home />} />
+						<Route path="/free" element={<FreePage />} />
+						<Route path="/public" element={<PublicPage />} />
 						<Route path="/features" element={<Features />} />
 						<Route path="/enterprise" element={<Enterprise />} />
 						<Route path="/download" element={<DownloadPage />} />

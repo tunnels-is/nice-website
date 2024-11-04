@@ -9,16 +9,7 @@ import STORE from "../store";
 import TextImageCenter from "../components/TextImageCenter";
 
 
-
-const featureList = [
-	{ ...STORE.Content.Features.Basic.NoInstallation, Tag: "big11", BG: false },
-	{ ...STORE.Content.Features.Basic.AnonymousAccounts, Tag: "big12", BG: true },
-	{ ...STORE.Content.Features.Basic.NoPersistance, Tag: "big13", BG: true },
-	{ ...STORE.Content.Features.Basic.AnonymousPayments, Tag: "big14", BG: true },
-]
-
 const featureList2 = [
-	{ ...STORE.Content.Features.Basic.IPV6Blocking, Tag: "big15", BG: false },
 	{ ...STORE.Content.Features.Advanced.OptimizedSoftware, Tag: "big41", BG: true },
 	{ ...STORE.Content.Features.Advanced.TunnelsOnOpenWRT, Tag: "big42", BG: false },
 	{ ...STORE.Content.Features.Advanced.CommunitySourceAccess, Tag: "big43", BG: false },
@@ -54,14 +45,9 @@ const Features = () => {
 			"a18": true,
 		}
 
-
-		featureList?.forEach(f => {
-			a[f.Tag] = true
-		})
 		featureList2?.forEach(f => {
 			a[f.Tag] = true
 		})
-
 
 		initialize(a)
 
@@ -113,7 +99,7 @@ const Features = () => {
 			tag1={"a7"}
 		/>
 
-		<BigFeatures features={featureList} />
+		<BigFeatures features={featureList2} />
 
 		<TextImageLeft
 			title={STORE.Content.Enterprise.TextImageLeft.Title}
@@ -124,7 +110,6 @@ const Features = () => {
 			tag1={"a8"}
 		/>
 
-		<BigFeatures features={featureList2} />
 
 		<Download />
 

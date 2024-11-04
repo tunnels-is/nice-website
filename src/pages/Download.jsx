@@ -23,11 +23,11 @@ const DownloadPage = () => {
 
 	}, [])
 
-	return (<div className="basic-page">
+	return (<div className="small-gap-page">
 
 		<SmallBanner
 			title={"Multi-Platform"}
-			subtitle={"Native UI and CLI versions for all platforms"}
+			subtitle={"available for all platforms"}
 			tag1={"animate1"}
 		/>
 

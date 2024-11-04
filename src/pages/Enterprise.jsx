@@ -48,7 +48,7 @@ const Enterprise = () => {
 
 	}, [])
 
-	return (<div className="basic-page">
+	return (<div className="small-gap-page">
 
 
 		<SmallBanner

@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import ScrollAnimate from "../components/ScrollAnimate";
-import STORE from "../store";
-import Triforce from "../components/Triforce";
 import SmallBanner from "../components/SmallBanner";
 import Download from "../components/Download";
 import Pricing from "../components/Pricing";
@@ -28,7 +26,7 @@ const PricingPage = () => {
 
 			<SmallBanner
 				title={"Public Network Access"}
-				subtitle={"Subscribe or top-up your account to get public network access"}
+				subtitle={"subscribe to get public network access"}
 				tag1={"animate1"}
 			/>
 
