@@ -9,7 +9,7 @@
 
 ## Hardware Requirements
  - CPU: 1 core, 1 thread (this setup can push 1Gbps)
-    - NOTE: Performance on MIPS architecure is sub-optimal for now
+    - <b>NOTE</b>: Performance on MIPS architecure is sub-optimal for now
  - RAM: 500MB (we do some memory pre-allocation for performance reasons)
  - DISK: Tunnels does not use disk
  - NIC: any network card will do as longs as you have an IPv4 Address
