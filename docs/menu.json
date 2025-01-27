@@ -72,6 +72,26 @@
 			"indent": 2
 		},
 		{
+			"tag": "Minimal + IoT Client",
+			"file": "min-iot.md",
+			"indent": 0
+		},
+		{
+			"tag": "Creating Device Keys",
+			"file": "min-iot-device-key.md",
+			"indent": 2
+		},
+		{
+			"tag": "DNS Initialization",
+			"file": "min-iot-dns.md",
+			"indent": 2
+		},
+		{
+			"tag": "Embeding Tunnels",
+			"file": "min-iot-embeding.md",
+			"indent": 2
+		},
+		{
 			"tag": "Configurations",
 			"file": "configurations.md",
 			"indent": 0
@@ -129,11 +149,6 @@
 		{
 			"tag": "2x IP Setup",
 			"file": "vpn-2ip.md",
-			"indent": 2
-		},
-		{
-			"tag": "Multi IP Per Server",
-			"file": "vpn-multi-ip.md",
 			"indent": 2
 		}
 	]
