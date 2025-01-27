@@ -1,70 +1,70 @@
 # Setting up your private server
-## Notes
- - We are working on an API to automate this deployment process
 
 ## Requirements 
- - Server with public IP 
-    - preferably two IPs for maximum performance but it's not required
+ - Server with a public IPv4 Address 
+    - preferably two IPv4 Addresses for maximum performance but it's not required
  - Linux operating system 
     - [Recommended Linux configurations](https://tunnels.is/#/docs/Linux%20Configs)
  - iptables installed
-    ```bash
-    $ apt install iptables
-    ```
+
+## Hardware Requirements
+ - CPU: 1 core, 1 thread (this setup can push 1Gbps)
+    - NOTE: Performance on MIPS architecure is sub-optimal for now
+ - RAM: 500MB (we do some memory pre-allocation for performance reasons)
+ - DISK: Tunnels does not use disk
+ - NIC: any network card will do as longs as you have an IPv4 Address
 
 # Step 1 
-Navigate to `Private` in the `Tunnels UI` and press `create`.
-<b>IMPORTANT</b>: You will need to use the `server ID` later.
-
-![new-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-new.png)
+Navigate to `Private` in the `Tunnels UI` and press `New Server`.
+<b>IMPORTANT</b>: You will need to use the `ID` later.
 
 # Step 2
-Download and run the server binary with the `--config` and `--id` flags.
-<b>IMPORTANT</b>: Download the `server.crt`, you will need it to connect.
-
+Download and run the server binary to a location of your choosing.
+Releases can be found [here](https://github.com/tunnels-is/tunnels/releases/latest)
 ```bash
 $ wget https://github.com/tunnels-is/tunnels/releases/download/v[VERSION]/server_[VERSION]_Linux_x86_64.tar.gz
 $ tar -xf server_[VERSION]_Linux_x86_64.tar.gz
+```
 
-$ ./tunnels --config --id 6714f2479950f0dfede56c18
-CERT SERIAL NUMBER:  6BF79FC5F63556DB96707400E03CA0CC
+Run the server binary using the `--config` and `--id` flags. 
+The `--id` flag should be the `ID` you got when you created the priavte server in step 1.
 
+```bash
+$ ./tunnels --config --id [PRIVATE_SERVER_ID]
+CERT SERIAL NUMBER:  [CERTIFICATE_SERIAL]
+```
+<b>IMPORTANT</b>: Download the `server.crt`, you will need it to connect.
+<b>IMPORTANT</b>: Save the `CERTIFICATE_SERIAL` it will be used later.
+
+The directory should look like this once you're done:
+```bash
 $ ls
 server.crt  server.json  server.key  tunnels
 ```
 
-![update-server](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/server-update-serial.png)
-
-# Step 3
-Validate the `server.json` and start the server.
-<b>NOTE</b>: Starting the server does not require any command line flags
-
-```bash
-$ ./server
-```
-
-## server.json
+Review the `server.json` and start the server if everything looks good.
+example generated `server.json`:
 ```json
 {
-  "ID": "6714f2479950f0dfede56c18",
-  "ControlIP": "93.95.231.66", // Default gateway IP
-  "ControlPort": "444", // Port used to Connect
-  "UserMaxConnections": 4, // Maximum number of client connection
-  "InterfaceIP": "93.95.231.66", // IP used for actual VPN traffic
-  "DataPort": "443", // Port used to VPN traffic
+  "ID": "[PRIVATE_SERVR_ID]", // This is your private server ID
+  "ControlIP": "[YOUR_SERVER_IP]", 
+  "ControlPort": "444", 
+  "UserMaxConnections": 4, 
+  "InterfaceIP": "[YOUR_SERVER_IP]", 
+  "DataPort": "443", 
   "StartPort": 2000,
   "EndPort": 65500,
-  "AvailableMbps": 1000,
+  "AvailableMbps": 1000, 
   "AvailableUserMbps": 10,
-  "InternetAccess": true,
-  "LocalNetworkAccess": true,
-  "DNSAllowCustomOnly": false,
-  "DNS": [],
+  "InternetAccess": true, 
+  "LocalNetworkAccess": true, 
+  "DNSAllowCustomOnly": false, 
+  "DNS": [], 
   "Networks": [
     {
       "Tag": "",
-      "Network": "93.95.231.66/24",
-      "Nat": "10.10.10.1/24", // Automatic Local Network NAT
+      "Network": "[YOUR_SERVER_IP]/24",
+      "Nat": "10.10.10.1/24", 
       "Routes": null
     }
   ],
@@ -76,26 +76,34 @@ $ ./server
   "ControlKey": "./server.key"
 }
 ```
+<b>IMPORTANT</b>: Save the `ControlIP` and `ControlPort` they will be used later.
+<b>NOTE:</b> (full server config example)[https://tunnels.is/#/docs/Server%20Config]
+
+# Step 3
+Start your server.
+```bash
+$ ./tunnels
+```
+<b>NOTE</b>: Starting the server does not require any command line flags
+
 
 # Step 5
-Navigate to `Tunnels` in the `Tunnels UI` and press `+`
+Navigate to `Tunnels` in the `Tunnels UI` and press `New Tunnels`
 
 The tunnel interface will required the following configurations:
- - `IPv4Address` set to a unique local IP address
- - `Tag` and `IFName` set to your preffered values
- - `Private` set to true
- - `PrivateIP` set to your `server.json` ControlIP 
- - `PrivatePort` set to your `server.json` ControlPort 
- - `PrivateCert` set as the path to `server.crt` 
+
+ - `IPv4Address` set to a unique local IP address (recommended: 172.22.22.33)
+ - `Tag` The identifier for this connection
+ - `IFName` The name given to your tunnel interface
+ - `Private` set to `true`
+ - `PrivateIP` set as the value of `ControlIP` from the `server.json`
+ - `PrivateIP` set as the value of `ControlPort` from the `server.json`
+ - `ServerID` set this to the value of your new private server `ID`
+ - `PrivateCert` set as the path to `server.crt` downloaded in step 2
  - `EnableDefaultRoute` set to `true` if you want to route all network traffic
 
 <b>NOTE</b>: This information is only stored locally on your computer. Tunnels does not know the location of your VPN servers.
 
-![new-tunnel](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/new-tunnel.png)
-
 # Step 6
-
 Navigate to `Private` in the `Tunnels UI`, find your new private server and select `assign`.
-This will give you a list of available `Tunnels`, select the one we just created.
-
-![tunnel-finished](https://raw.githubusercontent.com/tunnels-is/media/master/v3/guides/new-private-server/tunnel-finished.png)
+This will give you a list of available `Tunnels`, select the one you just created.
