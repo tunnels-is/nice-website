@@ -17,7 +17,6 @@ net.ipv4.tcp_mtu_probing=0
 net.core.default_qdisc=fq
 net.ipv4.tcp_timestamps=0
 net.ipv4.tcp_sack=1
-#net.ipv4.tcp_congestion_control=bbr
 net.ipv4.tcp_congestion_control=bbr
 
 net.core.optmem_max=65536000
@@ -47,7 +46,11 @@ net.ipv4.conf.default.send_redirects = 0
 # Supervisor
 Supervisor helps run binaries in the background and helps with log rotation.
 ```bash
+# apt based systems
 $ apt install supervisor
+
+# arch
+$ pacman -S supervisor
 ```
 
 ### /etc/supervisor/conf.d/tunnels.conf
@@ -58,7 +61,7 @@ command=/opt/tunnels/tunnels
 autostart=true
 autorestart=true
 startretries=1000
-user=[select user]
+user=root
 directory=/opt/tunnels
 redirect_stderr=true
 stdout_logfile=/var/log/tunnels/tunnels.log
