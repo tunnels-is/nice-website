@@ -328,6 +328,11 @@ body::-webkit-scrollbar {
     text-decoration: none;
   }
 
+  .cyber-monday {
+    margin-bottom: 100px;
+    font-size: 50px;
+  }
+
   .pricing-wrapper {
     display: flex;
     flex-direction: row;
@@ -933,7 +938,7 @@ body::-webkit-scrollbar {
       .button {
         cursor: pointer;
         color: var(--c-dark-blue);
-        width: 200px;
+        width: fit-content;
         height: 100%;
       }
 

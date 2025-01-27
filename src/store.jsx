@@ -1,6 +1,6 @@
 const DATA = "data_";
 import { LayersIcon } from '@radix-ui/react-icons';
-const Version = "1.0.2"
+const Version = "1.0.4"
 
 var STORE = {
 	Name: "Tunnels",
@@ -355,8 +355,9 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 			"Accept": "*/*",
 		},
 		AnonKey: {
-			Title: "Anonymous License Key",
-			Price: 9,
+			Title: "Anonymous License",
+			// Price: 9,
+			Price: 3,
 			URL: "https://tunnels.lemonsqueezy.com/buy/e8cbc47c-c19b-4ef7-9f8a-c8e2b94597dd",
 			Button: "Register Now",
 			Included: ["something", "something", "something"],
@@ -364,21 +365,23 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 		subs: [
 			{
 				Title: "1 Month",
-				Price: 9,
+				// Price: 9,
+				Price: 3,
 				URL: "https://tunnels.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3",
 				Button: "One Month",
 				Included: ["- Public Network", "- Money Back Guarantee", "- Support"],
 			},
 			{
 				Title: "12 Months",
-				Price: 6,
+				Price: 2,
 				URL: "https://tunnels.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a",
 				Button: "One Year",
 				Included: ["- Public Network", "- Money Back Guarantee", "- Support"],
 			},
 			{
 				Title: "6 Months",
-				Price: 8,
+				// Price: 8,
+				Price: 2.5,
 				URL: "https://tunnels.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361",
 				Button: "Six Months",
 				Included: ["- Public Network", "- Money Back Guarantee", "- Support"],
