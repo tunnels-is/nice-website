@@ -12,6 +12,9 @@ const Pricing = () => {
 	return (
 		<div className={"pricing-component pricing-animate viewport-hide"}>
 
+			<div className="title cyber-monday">
+				New Years Sale!
+			</div>
 
 
 			<div className="pricing-wrapper">
@@ -48,7 +51,7 @@ const Pricing = () => {
 					target="_blank"
 					href={STORE.Config.AnonKey.URL}
 				>
-					{STORE.Config.AnonKey.Title}
+					{STORE.Config.AnonKey.Title + ' ' + STORE.Config.AnonKey.Price + '$'}
 				</a>
 			</div>
 		</div>
