@@ -80,7 +80,12 @@ example generated `server.json`:
 <b>NOTE:</b> (full server config example)[https://tunnels.is/#/docs/Server%20Config]
 
 # Step 3
-Start your server.
+Start your server with feature flags of your choice:
+ - VPN: This starts a `Virtual Private Network`, this allows packets to be forwarded to an inner network or the
+ internet.
+ - VPL: This starts a `Virtual Private Lan`, this allows connected devices to communicate with eachother as if they were
+   on a lan.
+ - API: This start an API server which can display the DHCP table for the `Virtual Private Lan` 
 ```bash
 $ ./tunnels
 ```
