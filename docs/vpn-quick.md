@@ -102,7 +102,7 @@ The tunnel interface will required the following configurations:
  - `IFName` The name given to your tunnel interface
  - `Private` set to `true`
  - `PrivateIP` set as the value of `ControlIP` from the `server.json`
- - `PrivateIP` set as the value of `ControlPort` from the `server.json`
+ - `PrivatePort` set as the value of `ControlPort` from the `server.json`
  - `ServerID` set this to the value of your new private server `ID`
  - `PrivateCert` set as the path to `server.crt` downloaded in step 2
  - `EnableDefaultRoute` set to `true` if you want to route all network traffic
