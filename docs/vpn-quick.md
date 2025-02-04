@@ -92,7 +92,7 @@ $ ./tunnels
 <b>NOTE</b>: Starting the server does not require any command line flags
 
 
-# Step 5
+# Step 4
 Navigate to `Tunnels` in the `Tunnels UI` and press `New Tunnels`
 
 The tunnel interface will required the following configurations:
@@ -109,6 +109,6 @@ The tunnel interface will required the following configurations:
 
 <b>NOTE</b>: This information is only stored locally on your computer. Tunnels does not know the location of your VPN servers.
 
-# Step 6
+# Step 5
 Navigate to `Private` in the `Tunnels UI`, find your new private server and select `assign`.
 This will give you a list of available `Tunnels`, select the one you just created.
