@@ -4,9 +4,8 @@ const Banner = (props) => {
 	return (<div className={"banner viewport-hide " + props.tag1}>
 
 		<div className="top-text">
-			<h1 className="bigtitle">{props.title}</h1>
-			<p className="subtitle">
-				{props.subtitle}
+			<h1 className="text bigtitle">{props.title}</h1>
+			<p className="subtitle" dangerouslySetInnerHTML={{ __html: props.subtitle }}>
 			</p>
 		</div>
 
@@ -15,15 +14,6 @@ const Banner = (props) => {
 			src={props.img1}
 		/>
 
-		<img
-			className="left"
-			src={props.img2}
-		/>
-
-		<img
-			className="right"
-			src={props.img3}
-		/>
 
 	</div>)
 }

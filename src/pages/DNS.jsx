@@ -4,9 +4,8 @@ import Download from "../components/Download";
 import SmallBanner from "../components/SmallBanner";
 import STORE from "../store";
 import TextImageRight from "../components/TextImageRight";
-import TextImageLeft from "../components/TextImageLeft";
 import BigFeatures from "../components/BigFeatures";
-import Features from "./Features";
+import Diagram from "../components/TextImageCenter";
 
 
 const f = [
@@ -55,16 +54,29 @@ const DNS = () => {
 			tag1={"a1"}
 		/>
 
+
 		<TextImageRight
 			title={STORE.Content.DNSPage.DNSProtection.Title}
 			content={STORE.Content.DNSPage.DNSProtection.Content}
 			img={STORE.Content.DNSPage.DNSProtection.Img}
+			tag1={"a3"}
+		/>
+
+		<Diagram
+			title={STORE.Content.Diagrams.DnsServerSide.Title}
+			content={STORE.Content.Diagrams.DnsServerSide.Content}
+			img={STORE.Content.Diagrams.DnsServerSide.Img1}
 			tag1={"a2"}
 		/>
 
-		<BigFeatures features={f} />
+		<Diagram
+			title={STORE.Content.Diagrams.DnsDeviceSide.Title}
+			content={STORE.Content.Diagrams.DnsDeviceSide.Content}
+			img={STORE.Content.Diagrams.DnsDeviceSide.Img1}
+			tag1={"a4"}
+		/>
 
-		<Download />
+		<BigFeatures features={f} />
 
 	</div>)
 

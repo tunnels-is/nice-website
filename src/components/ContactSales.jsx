@@ -12,7 +12,7 @@ const ContactSales = () => {
 	return (<div className={"contact-sales contact-sales-animate viewport-hide"}>
 
 		<div className="top-text">
-			<h1 className="bigtitle">{STORE.Content.ContactSales.Title}</h1>
+			<h1 className="bigtitle text">{STORE.Content.ContactSales.Title}</h1>
 			<a href={STORE.Content.ContactSales.link} className="subtitle link">
 				{STORE.Content.ContactSales.linkTitle}
 			</a>

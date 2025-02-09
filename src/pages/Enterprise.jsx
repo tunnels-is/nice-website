@@ -7,6 +7,7 @@ import BigFeatures from "../components/BigFeatures";
 import Download from "../components/Download";
 import STORE from "../store";
 import ContactSales from "../components/ContactSales";
+import Diagram from "../components/TextImageCenter";
 
 const bigFeatures = [
 	{ ...STORE.Content.Features.Enterprise.UserManagement, Tag: "bigfeatureanimate3", BG: true },
@@ -57,27 +58,23 @@ const Enterprise = () => {
 			tag1={"animate1"}
 		/>
 
-		<ContactSales />
-
-		<BigFeatures features={bigFeatures} />
-
-		<TextImageRight
-			title={STORE.Content.Enterprise.TextImageRight1.Title}
-			content={STORE.Content.Enterprise.TextImageRight1.Content}
-			img={STORE.Content.Enterprise.TextImageRight1.Img}
-			shadow={false}
+		<Diagram
+			title={STORE.Content.Diagrams.OfficeMulti.Title}
+			content={STORE.Content.Diagrams.OfficeMulti.Content}
+			img={STORE.Content.Diagrams.OfficeMulti.Img1}
 			tag1={"animate6"}
 		/>
 
-		<TextImageLeft
-			title={STORE.Content.Enterprise.TextImageLeft.Title}
-			content={STORE.Content.Enterprise.TextImageLeft.Content}
-			img={STORE.Content.Enterprise.TextImageLeft.Img}
-			shadow={false}
-			className="gopher"
-			tag1={"animate2"}
+		<Diagram
+			title={STORE.Content.Diagrams.SysadminMulti.Title}
+			content={STORE.Content.Diagrams.SysadminMulti.Content}
+			img={STORE.Content.Diagrams.SysadminMulti.Img1}
+			tag1={"animate7"}
 		/>
 
+		<ContactSales />
+
+		<BigFeatures features={bigFeatures} />
 
 	</div>)
 

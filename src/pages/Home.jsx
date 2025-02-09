@@ -5,6 +5,7 @@ import Banner from "../components/Banner";
 import ScrollAnimate from "../components/ScrollAnimate";
 import STORE from "../store";
 import BigFeatures from "../components/BigFeatures";
+import Diagram from "../components/TextImageCenter";
 
 const f = [
 	{ ...STORE.Content.Features.Basic.DNSCustom, Tag: "big25", BG: true },
@@ -49,60 +50,56 @@ const Home = () => {
 
 	return (<div className="home-page">
 
+
 		<Banner
 			title={STORE.Content.Home.Banner.Title}
 			subtitle={STORE.Content.Home.Banner.Subtitle}
 			img1={STORE.Content.Home.Banner.Img1}
 			img2={STORE.Content.Home.Banner.Img2}
-			img3={STORE.Content.Home.Banner.Img3}
 			tag1={"animate1"}
 		/>
 
-		<div>
-			<a className="free-link" href="#/free">
-				<div className="front-page-free-stuff title link">
-					Learn About Our Free Features
-				</div>
-			</a>
-		</div>
 
-		<BigFeatures features={f2} />
-
-		<TextImageLeft
-			link={"/features"}
-			title={STORE.Content.Home.ImageLeft1.Title}
-			content={STORE.Content.Home.ImageLeft1.Content}
-			img={STORE.Content.Home.ImageLeft1.Img}
-			tag1={"animate8"}
+		<Diagram
+			link={"/technical"}
+			title={STORE.Content.Diagrams.Genericvpn.Title}
+			content={STORE.Content.Diagrams.Genericvpn.Content}
+			img={STORE.Content.Diagrams.Genericvpn.Img1}
+			tag1={"animate2"}
 		/>
 
+		<Diagram
+			link={"/technical"}
+			title={STORE.Content.Diagrams.IsolatedNetwork.Title}
+			content={STORE.Content.Diagrams.IsolatedNetwork.Content}
+			img={STORE.Content.Diagrams.IsolatedNetwork.Img1}
+			tag1={"animate3"}
+		/>
 
-		<BigFeatures features={f} />
+		<Diagram
+			link={"/technical"}
+			title={STORE.Content.Diagrams.Routing.Title}
+			content={STORE.Content.Diagrams.Routing.Content}
+			img={STORE.Content.Diagrams.Routing.Img1}
+			tag1={"animate4"}
+		/>
 
-		<TextImageRight
+		<Diagram
+			link={"/technical"}
+			title={STORE.Content.Diagrams.Nat.Title}
+			content={STORE.Content.Diagrams.Nat.Content}
+			img={STORE.Content.Diagrams.Nat.Img1}
+			tag1={"animate5"}
+		/>
+
+		<Diagram
 			link={"/dns"}
-			title={STORE.Content.Home.ImageRight1.Title}
-			content={STORE.Content.Home.ImageRight1.Content}
-			img={STORE.Content.Home.ImageRight1.Img}
-			tag1={"animate9"}
+			title={STORE.Content.Diagrams.Dns.Title}
+			content={STORE.Content.Diagrams.Dns.Content}
+			img={STORE.Content.Diagrams.Dns.Img1}
+			tag1={"animate6"}
 		/>
 
-		<TextImageLeft
-			link={"/enterprise"}
-			title={STORE.Content.Home.ImageLeft2.Title}
-			content={STORE.Content.Home.ImageLeft2.Content}
-			img={STORE.Content.Home.ImageLeft2.Img}
-			tag1={"animate10"}
-		/>
-
-
-		<TextImageRight
-			link={"/"}
-			title={STORE.Content.Home.ImageRight2.Title}
-			content={STORE.Content.Home.ImageRight2.Content}
-			img={STORE.Content.Home.ImageRight2.Img}
-			tag1={"animate11"}
-		/>
 
 
 	</div>)

@@ -7,6 +7,7 @@ import Download from "../components/Download";
 import React, { useEffect } from "react";
 import STORE from "../store";
 import TextImageCenter from "../components/TextImageCenter";
+import Diagram from "../components/TextImageCenter";
 
 
 const featureList2 = [
@@ -15,9 +16,7 @@ const featureList2 = [
 	{ ...STORE.Content.Features.Advanced.CommunitySourceAccess, Tag: "big43", BG: false },
 ]
 
-
-
-const Features = () => {
+const Technical = () => {
 
 	const [initialize] = ScrollAnimate()
 
@@ -61,45 +60,12 @@ const Features = () => {
 			tag1={"a1"}
 		/>
 
-		<TextImageCenter
-			className={"features-tunnels-diagram"}
-			shadow={false}
-			title={STORE.Content.FeaturePage.TunnelsToServersDiagram.Title}
-			content={STORE.Content.FeaturePage.TunnelsToServersDiagram.Content}
-			img={STORE.Content.FeaturePage.TunnelsToServersDiagram.Img}
+		<Diagram
+			title={STORE.Content.Diagrams.VPNEncryption.Title}
+			content={STORE.Content.Diagrams.VPNEncryption.Content}
+			img={STORE.Content.Diagrams.VPNEncryption.Img1}
 			tag1={"a2"}
 		/>
-
-		<TextImageLeft
-			title={STORE.Content.FeaturePage.PrivateServers.Title}
-			content={STORE.Content.FeaturePage.PrivateServers.Content}
-			img={STORE.Content.FeaturePage.PrivateServers.Img}
-			tag1={"a3"}
-		/>
-
-		<TextImageRight
-			title={STORE.Content.FeaturePage.Tunnels.Title}
-			content={STORE.Content.FeaturePage.Tunnels.Content}
-			img={STORE.Content.FeaturePage.Tunnels.Img}
-			tag1={"a4"}
-		/>
-
-		<TextImageLeft
-			title={STORE.Content.FeaturePage.DynamicNetworking.Title}
-			content={STORE.Content.FeaturePage.DynamicNetworking.Content}
-			img={STORE.Content.FeaturePage.DynamicNetworking.Img}
-			tag1={"a5"}
-		/>
-
-
-		<TextImageRight
-			title={STORE.Content.FeaturePage.DNSCorrectness.Title}
-			content={STORE.Content.FeaturePage.DNSCorrectness.Content}
-			img={STORE.Content.FeaturePage.DNSCorrectness.Img}
-			tag1={"a7"}
-		/>
-
-		<BigFeatures features={featureList2} />
 
 		<TextImageLeft
 			title={STORE.Content.Enterprise.TextImageLeft.Title}
@@ -107,14 +73,34 @@ const Features = () => {
 			img={STORE.Content.Enterprise.TextImageLeft.Img}
 			shadow={false}
 			className="gopher"
-			tag1={"a8"}
+			tag1={"a3"}
 		/>
 
+		<Diagram
+			title={STORE.Content.Diagrams.IsolatedNetworkDetails.Title}
+			content={STORE.Content.Diagrams.IsolatedNetworkDetails.Content}
+			img={STORE.Content.Diagrams.IsolatedNetworkDetails.Img1}
+			tag1={"a4"}
+		/>
 
-		<Download />
+		<BigFeatures features={featureList2} />
+
+		<Diagram
+			title={STORE.Content.Diagrams.RoutingDetails.Title}
+			content={STORE.Content.Diagrams.RoutingDetails.Content}
+			img={STORE.Content.Diagrams.RoutingDetails.Img1}
+			tag1={"a5"}
+		/>
+
+		<Diagram
+			title={STORE.Content.Diagrams.NatDetails.Title}
+			content={STORE.Content.Diagrams.NatDetails.Content}
+			img={STORE.Content.Diagrams.NatDetails.Img1}
+			tag1={"a6"}
+		/>
 
 	</div>)
 
 }
 
-export default Features;
+export default Technical;
