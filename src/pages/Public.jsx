@@ -5,6 +5,7 @@ import Download from "../components/Download";
 import BigFeatures from "../components/BigFeatures";
 import STORE from "../store";
 import TextImageRight from "../components/TextImageRight";
+import Diagram from "../components/TextImageCenter";
 
 const featureList = [
 	{ ...STORE.Content.Features.Basic.NoInstallation, Tag: "big11", BG: true },
@@ -50,9 +51,16 @@ const PublicPage = () => {
 		<div className="basic-page">
 
 			<SmallBanner
-				title={"Public VPN Network"}
-				subtitle={"we have something for everyone"}
+				title={"The Tunnels Network"}
+				subtitle={"multi route public network"}
 				tag1={"animate1"}
+			/>
+
+			<Diagram
+				title={STORE.Content.Diagrams.PublicVPN.Title}
+				content={STORE.Content.Diagrams.PublicVPN.Content}
+				img={STORE.Content.Diagrams.PublicVPN.Img1}
+				tag1={"animate3"}
 			/>
 
 			<BigFeatures features={featureList2} />
@@ -66,9 +74,6 @@ const PublicPage = () => {
 			/>
 
 			<BigFeatures features={featureList} />
-
-
-			<Download />
 
 		</div>
 	)

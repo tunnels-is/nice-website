@@ -6,10 +6,10 @@ const BigFeatures = (props) => {
 		{props.features?.map(f => {
 			return (
 				<div key={f.Tag} className={`feature viewport-hide ${f.Tag} ${f.BG ? "feature-bg" : ""}`}>
-					<h1 className="title">
+					<h1 className="title text">
 						{f.Title}
 					</h1>
-					<p className="content">
+					<p className="content text">
 						{f.Content}
 					</p>
 				</div>

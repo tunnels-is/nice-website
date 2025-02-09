@@ -77,7 +77,7 @@ example generated `server.json`:
 }
 ```
 <b>IMPORTANT</b>: Save the `ControlIP` and `ControlPort` they will be used later.
-<b>NOTE:</b> (full server config example)[https://tunnels.is/#/docs/Server%20Config]
+<b>NOTE:</b> [full server config example](https://tunnels.is/#/docs/Server%20Config)
 
 # Step 3
 Start your server with feature flags of your choice:

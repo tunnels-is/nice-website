@@ -1,33 +1,25 @@
 import React from "react";
 
-const TextImageCenter = (props) => {
-	let shadow = "shadow"
-	if (props.shadow === false) {
-		shadow = ""
-	}
-	return (<div className={`${props.className} textimagecenter-component`}>
+const Diagram = (props) => {
+	return (<div className={`${props.className} diagram-component`}>
 
-		<div className={`content text`}>
+		<div className={`content`}>
+			<div className="title text">{props.title}</div>
 			{props.link &&
-				<a href={"#" + props.link} className="title link">{props.title}</a>
+				<a href={"#" + props.link} className=" link">learn more</a>
 			}
-			{!props.link &&
-				<div className="title">{props.title}</div>
-			}
-			<div dangerouslySetInnerHTML={{ __html: props.content }}>
+			<div className="subtitle text" dangerouslySetInnerHTML={{ __html: props.content }}>
 			</div>
 		</div>
 
 		<img
-			className={`${props.tag1} ${shadow} viewport-hide`}
+			className={`${props.tag1} viewport-hide`}
 			src={props.img}
 		/>
-
-
 
 	</div>)
 
 }
 
-export default TextImageCenter;
+export default Diagram;
 
