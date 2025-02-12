@@ -21,29 +21,21 @@
   --c-background: #111212;
 
   --c-white: #ffffff;
-  /* Original Value */
   --c-shade1: #222324;
-  /* Slightly lighter than background */
   --c-shade2: #333435;
-  /* A bit more contrast */
   --c-shade3: #555657;
   --c-shade4: #999a9b;
   --c-shade5: #dddddd;
   --c-shade6: #f2f2f2;
-  /* Closest to white. */
   --c-blue: #2056e1;
   --c-light-blue: #3168f3;
 
-  /* Original Value, check if the contrast is good enough. */
-  /* --c-dark-blue: #add6ff; */
   --c-green: #28ad85;
-  /* Original Value, check if the contrast is good enough. */
   --c-dark-green: #b2f3db;
   --c-orange: #eb8718;
-  /* Original Value, check if the contrast is good enough. */
   --c-red: #e45b5b;
-  /* Original Value, check if the contrast is good enough. */
   --c-dark-red: #ffb3b3;
+  --c-black: #000000;
 
 
   --label-border-radius: 5px;
@@ -156,6 +148,12 @@
   display: flex;
   flex-direction: column;
   gap: 200px;
+}
+
+.pricing-page {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .home-page {
@@ -309,7 +307,7 @@ body::-webkit-scrollbar {
 
   .b2 {
     position: fixed;
-    top: 10px;
+    top: 12px;
     right: 160px;
   }
 
@@ -363,7 +361,7 @@ body::-webkit-scrollbar {
   align-items: center;
 
   .title {
-    margin: 100px 0px 0px 0px;
+    margin: 100px 0px 60px 0px;
   }
 
   .link {
@@ -421,7 +419,7 @@ body::-webkit-scrollbar {
     .item {
       display: flex;
       flex-direction: column;
-      background: white;
+      background: var(--c-shade2);
       height: 280px;
       flex: 0 0 260px;
       box-shadow: var(--content-shadow);
@@ -434,17 +432,24 @@ body::-webkit-scrollbar {
       .register {
         padding: 10px 20px 10px 20px;
         background: var(--c-blue);
-        color: var(--c-shade1);
+        color: var(--c-white);
         text-align: center;
+        font-weight: bold;
         font-size: 29px;
         cursor: pointer;
+      }
+
+      .register:hover {
+        transition: color .2s ease-in-out, background .2s ease-in-out;
+        color: var(--c-blue);
+        background: var(--c-shade5);
       }
 
       .pricing-title {
         margin: 30px 0px 10px 0px;
         text-align: center;
         font-size: 26px;
-        color: var(--c-blue);
+        color: var(--c-white);
         font-weight: 800;
       }
 
@@ -518,6 +523,10 @@ body::-webkit-scrollbar {
     .title {
       padding: 0px;
     }
+  }
+
+  .link {
+    padding-right: 0px;
   }
 
   img {
@@ -958,6 +967,7 @@ body::-webkit-scrollbar {
     font-weight: 200;
 
     .dl {
+      width: 200px;
       font-size: 30px;
     }
   }

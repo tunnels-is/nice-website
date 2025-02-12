@@ -19,7 +19,7 @@ const footerLinks = [
 	{ text: "Timeline", url: "https://calendar.google.com/calendar/embed?src=support%40nicelandvpn.is" },
 	{ text: "", url: "" },
 	{ text: "", url: "" },
-	{ text: "Slack", url: "https://join.slack.com/t/tunnelsgroup/shared_invite/zt-2tlxzfz28-qEiH19~_yKP6N1sKxJ_BwQ" },
+	{ text: "", url: "" },
 
 	{ text: "Enterprise", url: "/#/enterprise" },
 	{ text: "Pricing", url: "/#/pricing" },
@@ -31,7 +31,7 @@ const footerLinks = [
 	{ text: "Download", url: "/#/download" },
 	{ text: "", url: "" },
 	{ text: "", url: "" },
-	{ text: "Redit", url: "https://www.reddit.com/r/tunnels_is/" },
+	{ text: "Reddit", url: "https://www.reddit.com/r/tunnels_is/" },
 ]
 
 

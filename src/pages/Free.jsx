@@ -5,6 +5,7 @@ import Download from "../components/Download";
 import STORE from "../store";
 import TextImageRight from "../components/TextImageRight";
 import TextImageLeft from "../components/TextImageLeft";
+import Diagram from "../components/TextImageCenter";
 
 const FreePage = () => {
 	const [initialize] = ScrollAnimate()
@@ -28,8 +29,8 @@ const FreePage = () => {
 		<div className="basic-page">
 
 			<SmallBanner
-				title={"Free ?!?!"}
-				subtitle={"yes.. we have free stuff"}
+				title={"Free DNS and VPN features"}
+				subtitle={"no need to pay, just download and try Tunnels"}
 				tag1={"animate1"}
 			/>
 
@@ -41,15 +42,13 @@ const FreePage = () => {
 				tag1={"animate2"}
 			/>
 
-			<TextImageLeft
-				link={"features"}
+			<Diagram
+				link={"technical"}
 				title={STORE.Content.FreePage.PrivateServers.Title}
 				content={STORE.Content.FreePage.PrivateServers.Content}
-				img={STORE.Content.FreePage.PrivateServers.Img}
+				img={STORE.Content.Diagrams.VPNEncryption.Img1}
 				tag1={"animate3"}
 			/>
-
-			<Download />
 
 		</div>
 	)

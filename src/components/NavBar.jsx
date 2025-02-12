@@ -17,9 +17,8 @@ const NavBar = (props) => {
 		{ icon: ExternalLinkIcon, label: "Private VPN", route: "technical" },
 		{ icon: EnterIcon, label: "Routable DNS", route: "dns" },
 		{ icon: EnterIcon, label: "Enterprise", route: "enterprise" },
-		// { icon: EnterIcon, label: "Pricing", route: "Pricing" },
+		{ icon: ExternalLinkIcon, label: "Pricing", route: "Pricing" },
 		{ icon: AccessibilityIcon, label: "Documentation", route: "docs", },
-		{ icon: ExternalLinkIcon, label: "Free?", route: "free" },
 	]
 
 
@@ -74,12 +73,12 @@ const NavBar = (props) => {
 			})}
 
 			<div className="cta-button b1"
-				onClick={() => navHandler("/pricing")}
+				onClick={() => navHandler("/download")}
 			>
 				Download
 			</div>
 			<div className="cta-button b2"
-				onClick={() => navHandler("/download")}
+				onClick={() => navHandler("/pricing")}
 			>
 				Sign Up
 			</div>
