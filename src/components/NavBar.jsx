@@ -11,6 +11,7 @@ import {
 const NavBar = (props) => {
 	const navigate = useNavigate();
 	const location = useLocation();
+	const [open, setOpen] = useState(false);
 
 	const items = [
 		{ icon: ExternalLinkIcon, label: "Public VPN", route: "public" },
@@ -24,6 +25,10 @@ const NavBar = (props) => {
 
 	let { pathname } = location
 	let sp = pathname.split("/")
+	let cs = "close"
+	if (open) {
+		cs = "open"
+	}
 
 	const navHandler = (path) => {
 		console.log("navigating to:", path)
@@ -33,44 +38,54 @@ const NavBar = (props) => {
 
 	return (
 		<div className={`sidebar`}	>
+
 			<img src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/logo/logo2.svg"
 				className="logo"
 				onClick={() => navHandler("/")}
 			/>
 
-			{items.map(i => {
-				let onClick = () => { navHandler("/" + i.route) }
-				if (i.onClick !== undefined) {
-					onClick = i.onClick
-				}
+			<img className={`menu-handle`}
+				onClick={() => setOpen(!open)}
+				src="https://raw.githubusercontent.com/tunnels-is/media/master/v3/logo/menu.svg" />
 
+			<div className={`item-wrapper ${cs}`}
+			>
+				{items.map(i => {
+					let onClick = () => {
+						navHandler("/" + i.route)
+						setOpen(false)
+					}
+					if (i.onClick !== undefined) {
+						onClick = i.onClick
+					}
 
-				return (
-					<>
-						{i.url &&
-							<a key={i.label + "link"} href={i.url} target="_blank" >
+					return (
+						<	>
+							{i.url &&
+								<a key={i.label + "link"} href={i.url} target="_blank" >
+									<div className="item"
+									>
+										<div key={i.label + "_link"} className={`${sp[1] === i.route ? "active" : ""} text `}>
+											{i.label}
+										</div>
+									</div>
+								</a>
+							}
+							{!i.url &&
 								<div className="item"
-								>
-									<div key={i.label + "_link"} className={`${sp[1] === i.route ? "active" : ""} text `}>
+									key={i.label + "item"}
+									onClick={onClick}>
+									<div key={i.label + "_item"} className={`${sp[1] === i.route ? "active" : ""} text `}>
 										{i.label}
 									</div>
 								</div>
-							</a>
-						}
-						{!i.url &&
-							<div className="item"
-								key={i.label + "item"}
-								onClick={onClick}>
-								<div key={i.label + "_item"} className={`${sp[1] === i.route ? "active" : ""} text `}>
-									{i.label}
-								</div>
-							</div>
-						}
+							}
 
-					</>
-				)
+						</>
+					)
 
-			})}
+				})}
+			</div>
 
 			<div className="cta-button b1"
 				onClick={() => navHandler("/download")}

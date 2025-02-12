@@ -56,6 +56,9 @@ const Footer = () => {
 		<div className="footer">
 			<div className="grey-container">
 				{footerLinks.map((i, index) => {
+					if (i.url === "") {
+						return (<></>)
+					}
 					let item = i
 					let url = ""
 					let text = ""

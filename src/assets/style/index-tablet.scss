@@ -1,4 +1,61 @@
 @media (max-width: 1000px) {
+  .content-wrapper {
+    overflow-x: hidden;
+
+  }
+
+  .pricing-component .pricing-wrapper .item {
+    flex: 0 0 220px;
+  }
+
+  .sidebar {
+    width: 200px !important;
+    height: 100%;
+    flex-direction: column;
+    padding-top: 60px;
+    gap: 10px;
+    padding-left: 0px;
+    background: none;
+
+    .b2 {
+      position: fixed;
+      top: 56px;
+      right: 20px;
+    }
+
+    .open {
+      display: flex !important;
+    }
+
+    .close {
+      display: none !important;
+    }
+
+    .menu-handle {
+      display: inline;
+    }
+
+    .item-wrapper {
+      z-index: 2000;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--mobile-menu-bg);
+      box-shadow: 6px 6px 20px -3px rgba(0, 0, 0, 0.3);
+      gap: 10px;
+      width: 260px;
+
+      .link,
+      .item {
+        .text {
+
+          font-size: 24px;
+        }
+      }
+    }
+
+  }
 
   .light {
     --content-shadow: 6px 6px 20px -3px rgba(0, 0, 0, 0.3);

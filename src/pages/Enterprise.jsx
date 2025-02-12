@@ -72,9 +72,10 @@ const Enterprise = () => {
 			tag1={"animate7"}
 		/>
 
-		<ContactSales />
 
 		<BigFeatures features={bigFeatures} />
+
+		<ContactSales />
 
 	</div>)
 

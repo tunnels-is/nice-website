@@ -3,6 +3,7 @@
 .light {
   --content-shadow: 6px 6px 19px 4px rgba(0, 0, 0, 0.3);
   --menu-shadow: 2px 2px 22px 2px rgba(0, 0, 0, 0.3);
+  --mobile-menu-bg: #0a0a0a;
 
   /* --c-white: white; */
   /* --c-shade1: #f5f5f5; */
@@ -90,13 +91,6 @@
   color: var(--c-shade5);
 }
 
-.logo {
-  height: 30px;
-  width: auto;
-  margin-top: -8px;
-  margin-left: 10px;
-  cursor: pointer;
-}
 
 .floater3 {
   position: fixed;
@@ -297,6 +291,37 @@ body::-webkit-scrollbar {
   padding-top: 20px;
   /* box-shadow: var(--menu-shadow); */
   background-color: var(--c-background);
+  padding-left: 30px;
+
+  .menu-wrapper {
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  .item-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+  }
+
+  .menu-handle {
+    position: fixed;
+    top: 10px;
+    left: 50px;
+    display: none;
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+  }
 
 
   .b1 {
@@ -353,6 +378,48 @@ body::-webkit-scrollbar {
 
 }
 
+@media (min-width:650px) {
+  .pricing-component {
+    .pricing-wrapper {
+      .item1 {
+
+        z-index: 100;
+        height: 330px !important;
+        margin-top: -25px;
+
+        .pricing-title {
+          font-size: 28px !important;
+        }
+
+        .price {
+          margin-bottom: -25px !important;
+
+          .value {
+            font-size: 26px !important;
+          }
+
+          .symbol {
+            font-size: 26px !important;
+          }
+
+          .duration {
+            font-size: 16px !important;
+          }
+        }
+
+        .bullet-list {
+
+          .bl-item {
+            font-size: 16px !important;
+          }
+        }
+
+
+      }
+    }
+  }
+
+}
 
 .pricing-component {
   display: flex;
@@ -378,39 +445,6 @@ body::-webkit-scrollbar {
     flex-direction: row;
     justify-content: center;
 
-
-    .item1 {
-      z-index: 100;
-      height: 330px !important;
-      margin-top: -25px;
-
-      .pricing-title {
-        font-size: 28px !important;
-      }
-
-      .price {
-        margin-bottom: -25px !important;
-
-        .value {
-          font-size: 26px !important;
-        }
-
-        .symbol {
-          font-size: 26px !important;
-        }
-
-        .duration {
-          font-size: 16px !important;
-        }
-      }
-
-      .bullet-list {
-
-        .bl-item {
-          font-size: 16px !important;
-        }
-      }
-    }
 
     a {
       text-decoration: none;
@@ -974,7 +1008,7 @@ body::-webkit-scrollbar {
 }
 
 .doc-page {
-  margin-top: 100px;
+  margin-top: 130px;
   display: flex;
 
 
@@ -1072,9 +1106,6 @@ body::-webkit-scrollbar {
       cursor: pointer;
     }
 
-    .page:hover {
-      color: var(--c-dark-blue)
-    }
 
     .section {
       font-weight: bold;
@@ -1085,6 +1116,10 @@ body::-webkit-scrollbar {
       color: var(--c-shade4);
       font-size: 18px;
       margin-left: 20px;
+    }
+
+    .level2:hover {
+      color: var(--c-blue) !important
     }
   }
 }
