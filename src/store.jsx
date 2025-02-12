@@ -1,6 +1,6 @@
 const DATA = "data_";
 import { LayersIcon } from '@radix-ui/react-icons';
-const Version = "1.0.4"
+const Version = "1.0.15"
 
 var STORE = {
 	Name: "Tunnels",
@@ -85,10 +85,10 @@ var STORE = {
 			linkTitle: "support @ tunnels.is"
 		},
 		Download: {
-			Title: "Download Tunnels",
+			Title: "Download",
 			Subtitle: "click here for all available releases",
 			AllLink: "https://github.com/tunnels-is/tunnels/releases/latest",
-			MacOS: "https://github.com/tunnels-is/tunnels/releases/download/v" + Version + "/tunnels_" + Version + "_Darwin_x86_64.tar.gz",
+			MacOS: "https://github.com/tunnels-is/tunnels/releases/download/v" + Version + "/tunnels_" + Version + "_Darwin_arm64.tar.gz",
 			Windows: "https://github.com/tunnels-is/tunnels/releases/download/v" + Version + "/tunnels_" + Version + "_Windows_x86_64.zip",
 			Linux: "https://github.com/tunnels-is/tunnels/releases/latest",
 		},
@@ -148,15 +148,15 @@ var STORE = {
 			},
 		},
 		FreePage: {
-			DNS: {
-				Title: "DNS Blocking",
-				Content: "Tunnels offers a free DNS Blocking service. No Account required, just download and run.",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/dns-block.png",
-			},
 			PrivateServers: {
 				Title: "Private Servers",
-				Content: "Our users can make as many private servers as they want for free. No subscription needed.",
-				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/private-servers.png"
+				Content: "Private servers require an account but no payment. User can make as many private servers as they want. We will never charge users per server.",
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/diagrams/vpn-encryption.svg",
+			},
+			DNS: {
+				Title: "DNS Threat Protection",
+				Content: `Tunnels offers it's DNS proxy/server for free, no account or payment needed. This includes threat protection and custom DNS records.`,
+				Img: "https://raw.githubusercontent.com/tunnels-is/media/master/v3/screens/dns-resolve-and-block.png",
 			},
 
 		},
@@ -428,7 +428,7 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 		AnonKey: {
 			Title: "Anonymous License",
 			// Price: 9,
-			Price: 3,
+			Price: 8,
 			URL: "https://tunnels.lemonsqueezy.com/buy/e8cbc47c-c19b-4ef7-9f8a-c8e2b94597dd",
 			Button: "Register Now",
 			Included: ["something", "something", "something"],
@@ -436,15 +436,14 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 		subs: [
 			{
 				Title: "1 Month",
-				// Price: 9,
-				Price: 3,
+				Price: 8,
 				URL: "https://tunnels.lemonsqueezy.com/buy/6f75871d-ea8d-46e3-927b-f62dc2453ad3",
 				Button: "One Month",
 				Included: ["- Public Network", "- Money Back Guarantee", "- Support"],
 			},
 			{
 				Title: "12 Months",
-				Price: 2,
+				Price: 4,
 				URL: "https://tunnels.lemonsqueezy.com/buy/71bb1dd8-8fac-4d56-bfbf-63cfd6081c5a",
 				Button: "One Year",
 				Included: ["- Public Network", "- Money Back Guarantee", "- Support"],
@@ -452,7 +451,7 @@ Tunnels is essentially a network multiplexer and DNS proxy.
 			{
 				Title: "6 Months",
 				// Price: 8,
-				Price: 2.5,
+				Price: 6,
 				URL: "https://tunnels.lemonsqueezy.com/buy/214e7bee-3e9c-4d14-8e3d-0a96a1b48361",
 				Button: "Six Months",
 				Included: ["- Public Network", "- Money Back Guarantee", "- Support"],

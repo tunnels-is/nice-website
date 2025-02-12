@@ -36,6 +36,7 @@ const Documentation = () => {
 	const [menu, setMenu] = useState(STORE.DocMenu)
 
 	useEffect(() => {
+		window.scrollTo(0, 0)
 
 		let loadIn = async function() {
 			await loadMenu()

@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import STORE from "../store";
 import ScrollAnimate from "./ScrollAnimate";
+import { useNavigate } from "react-router-dom";
 
 const Pricing = () => {
 	const [initialize] = ScrollAnimate();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		initialize({ ["pricing-animate"]: true })
@@ -12,12 +14,17 @@ const Pricing = () => {
 	return (
 		<div className={"pricing-component pricing-animate viewport-hide"}>
 
-			<div className="title cyber-monday">
-				New Years Sale!
+			<div className="title">
+				<a className="link"
+					target="_blank"
+					href={STORE.Config.AnonKey.URL}
+				>
+					{STORE.Config.AnonKey.Title + ' ' + STORE.Config.AnonKey.Price + '$'}
+				</a>
 			</div>
 
-
 			<div className="pricing-wrapper">
+
 				{STORE.Config.subs.map((s, i) => {
 					return (
 						<a className={`item item` + i} target="_blank" href={s.URL}>
@@ -46,13 +53,11 @@ const Pricing = () => {
 
 			</div>
 
-			<div className="title">
-				<a className="link"
-					target="_blank"
-					href={STORE.Config.AnonKey.URL}
-				>
-					{STORE.Config.AnonKey.Title + ' ' + STORE.Config.AnonKey.Price + '$'}
-				</a>
+
+			<div className="title cyber-monday link"
+				onClick={() => navigate("/free")}
+			>
+				We also have some free stuff..
 			</div>
 		</div>
 	)

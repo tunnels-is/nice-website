@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import ScrollAnimate from "../components/ScrollAnimate";
 import SmallBanner from "../components/SmallBanner";
-import Download from "../components/Download";
 import Pricing from "../components/Pricing";
 
 const PricingPage = () => {
@@ -22,16 +21,15 @@ const PricingPage = () => {
 	}, [])
 
 	return (
-		<div className="basic-page">
+		<div className="pricing-page">
 
 			<SmallBanner
-				title={"Public Network Access"}
-				subtitle={"subscribe to get public network access"}
+				title={"Tunnels Public Network"}
+				subtitle={"Download the app to create an account"}
 				tag1={"animate1"}
 			/>
 
 			<Pricing />
-			<Download />
 
 		</div>
 	)

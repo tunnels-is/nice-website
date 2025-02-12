@@ -33,19 +33,6 @@ const DownloadPage = () => {
 
 		<Download />
 
-		<Triforce
-			content1={STORE.Content.Home.TriForce.Content1}
-			img1={STORE.Content.Home.TriForce.Img1}
-			content2={STORE.Content.Home.TriForce.Content2}
-			img2={STORE.Content.Home.TriForce.Img2}
-			content3={STORE.Content.Home.TriForce.Content3}
-			img3={STORE.Content.Home.TriForce.Img3}
-			tag1={"animate2"}
-			tag2={"animate3"}
-			tag3={"animate4"}
-		/>
-
-
 	</div>)
 
 }

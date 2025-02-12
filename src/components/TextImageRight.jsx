@@ -9,11 +9,9 @@ const TextImageRight = (props) => {
 	return (<div className="textimageright-component">
 
 		<div className="content text">
+			<div className="title">{props.title}</div>
 			{props.link &&
-				<a href={"#" + props.link} className="title link">{props.title}</a>
-			}
-			{!props.link &&
-				<div className="title">{props.title}</div>
+				<a href={"#" + props.link} className=" link">learn more</a>
 			}
 			<div dangerouslySetInnerHTML={{ __html: props.content }}>
 
