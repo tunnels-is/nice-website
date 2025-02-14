@@ -15,6 +15,7 @@
   "InternetAccess": true, // Toggles internet access for VPN users
   "LocalNetworkAccess": true, // Toggles local network access for VPN users
   "DNSAllowCustomOnly": false, // Prevents non-custom DNS queries from resolving on this network
+  "AdminEntities":["device-key", "user-id"], // Admin entities are DeviceKeys or UserIDs that are allowed to bypass the VPN Firewall
   "DNS": [ // Custom DNS records ( can be over-written in the tunnel config )
     {
       "Domain": "meow.com", // custom DNS record
